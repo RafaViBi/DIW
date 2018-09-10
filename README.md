@@ -1,6 +1,11 @@
 # DIW
+
 Ejercicios DIW
+
 ## Ejercicios DIW 
+
 Comandos basicos
 
-Hola mundo.
+1. git pull (desde la nube al pc)
+2. git -a -m "comment" (agregar comentario)
+3. git push (desde el pc a la nube)

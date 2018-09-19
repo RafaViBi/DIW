@@ -1,0 +1,13 @@
+table {
+    width:22.7em;
+    line-height: 1.4em; 
+    text-align:left; 
+    padding:.23em;
+}
+
+.titulo {
+    text-align: center;
+    background-color: #69A0F3;
+    color: #FFFFFF;
+    font-size: 120%;
+}

@@ -1,13 +1,35 @@
-table {
-    width:22.7em;
-    line-height: 1.4em; 
-    text-align:left; 
-    padding:.23em;
-}
-
 .titulo {
     text-align: center;
     background-color: #69A0F3;
     color: #FFFFFF;
     font-size: 120%;
 }
+
+table {
+    width:363px;
+    line-height: 22.4px; 
+    text-align:left; 
+    padding:3.5px;
+    border: 1px solid gray;
+    font-family: sans-serif;
+}
+
+#principal{
+    height: 35px;
+}
+
+#secundario{
+    font-size: 90%;
+    width:22.7em;
+    line-height: 1.4em; 
+    text-align:left; 
+    padding:.23em;
+
+}
+.textimage {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+} 

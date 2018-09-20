@@ -1,0 +1,29 @@
+div {
+    width: 100%;
+}
+
+#titulo {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+#pie {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif; 
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+}

@@ -8,7 +8,7 @@ function DNICorrecto(DNI) {
     
     var numero
     var letra
-    var ExpDNI =/^\d{8}[a-zA-Z]$/;
+    var ExpDNI =/^[0-9]{8}[a-zA-Z]{1}/;
     DNI = DNI.toUpperCase;
 
     if(ExpDNI.test(dni) == true){
@@ -17,21 +17,21 @@ function DNICorrecto(DNI) {
         letr = dni.substr(dni.length-1,1);
         numero = numero % 23;
         letra='TRWAGMYFPDXBNJZSQVHLCKET';
-        letra=letra.substring(numero,numero+1);
+        letra=letra.substr(numero,numero+1);
 
-        if (letra!=letr.toUpperCase()) {
+        if (letra!=letr) {
 
-          alert('Dni erroneo, la letra del NIF no se corresponde');
+            document.write('Tu DNI no es correcto ');
 
         }else{
 
-          alert('Dni correcto');
+            document.write('Dni correcto');
 
         }
 
     }else{
 
-        alert('Dni erroneo, formato no válido');
+        document.write('Dni erroneo, formato no válido');
 
     }
 

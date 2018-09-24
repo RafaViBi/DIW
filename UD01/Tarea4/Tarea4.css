@@ -7,10 +7,9 @@ a {
 }
 
 .contenido {
-    background: none repeat scroll 0 0 #fff;
+    background: #fff;
     border-top: 1px solid #fff;
     color: #666;
-    line-height: 18px;
     padding: 20px 20px 0 20px;
 }
 
@@ -24,17 +23,33 @@ a {
 .texto p{
     margin: 10px 0;
     color: #666;
+    padding: 15px 0px 20px 0px;
 }
 
 .configuracion {
     color: #069;
     font-size: 12px;
-    font-weight: normal;
-    text-transform: none;
     background: 0;
     border: 0;
-    text-shadow: none;
     top: 8px;
     padding: 0;
     margin-left: 60%;
+}
+
+.boton img {
+    border-radius: 3px;
+}
+
+.footer {
+    background: #f7f7f7;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 25px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 65%;
 }

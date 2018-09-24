@@ -6,7 +6,35 @@ a {
     text-decoration: none;
 }
 
+.contenido {
+    background: none repeat scroll 0 0 #fff;
+    border-top: 1px solid #fff;
+    color: #666;
+    line-height: 18px;
+    padding: 20px 20px 0 20px;
+}
+
 .general {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
+    font-size: 12px;
+    color: #3869ab;
+}
+
+.texto p{
+    margin: 10px 0;
+    color: #666;
+}
+
+.configuracion {
+    color: #069;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+    background: 0;
+    border: 0;
+    text-shadow: none;
+    top: 8px;
+    padding: 0;
+    margin-left: 60%;
 }

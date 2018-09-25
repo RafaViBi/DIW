@@ -1,11 +1,61 @@
+body {
+    font-family: Arial,sans-serif;
+}
+
 .flex-container {
     display: flex;
-    background-color: DodgerBlue;
+    background-color: #ededee;
   }
   
-  .flex-container > div {
-    background-color: #f1f1f1;
+.flex-container > div {
+    background-color: #ededee;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
-  }
+    width: 33%;
+}
+
+.tweet {
+    width: 373.333px;
+}
+
+.tweet .image {
+    background-image: url("dazfuller.jpg");
+    width: 115px;
+    height: 115px;
+    background-size: 100%;
+    background-position: 50% 25%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+.content {
+    padding-left: 8.2rem;
+    padding-top: 5px;
+}
+
+.content a {
+    text-decoration: none;
+    color: black;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.twitter {
+    font-size: 12px;
+    color: #6e6e6e;
+}
+
+.cuerpo a{
+    color: #0072be;
+    text-decoration: none;
+}
+
+.cuerpo {
+    font-size: 18px;
+    text-decoration-style: solid;  
+}

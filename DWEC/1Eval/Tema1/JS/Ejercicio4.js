@@ -1,9 +1,7 @@
-//var Date = prompt('Dime la fecha');
+var date = new Date();
 
-//var Date = new Date();
-
-document.write(comprobarDate(new Date));
-
-function comprobarDate(Date) {
-    return ({}).toString.call(Date).match(/\s([a-z|A-Z]+)/)[1]
+if (date instanceof Date && !isNaN(date.valueOf())) {
+    document.write("Variable tipo Date");
+} else {
+    document.write("Variable de otro tipo");
 }

@@ -1,0 +1,66 @@
+.elementoUno {
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    font-weight: 400;
+    min-height: 300px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.container {
+    box-sizing: border-box;
+    margin-left: 210px;
+    margin-right: 210px;
+    width: 100%;
+}
+
+.row {
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+}
+
+.imagenUno {
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+    float: left;
+    position: relative;
+    width: 390px;
+}
+
+.textoUno {
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    left: 97px;
+    position: relative;
+    width: 682.5px;
+}
+
+.elementoDos{
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+    min-height: 310px;
+    padding-top: 60px;
+    position: relative;
+}
+
+.imagenDos {
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+    float: left;
+    position: relative;
+    width: 390px;
+}
+
+.textoDos {
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    width: 682.5px;
+}

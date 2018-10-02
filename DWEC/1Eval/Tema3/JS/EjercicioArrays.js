@@ -1,46 +1,61 @@
-var frutas = ['Manzana', 'Banana'];
 var mySet = new Set();
+var array = new Array();
+var a = 500000;
 
-console.time('loop');
+//Añadir con add
+var start = new Date().getTime();
 
-mySet.add(1);
-mySet.add(5);
-mySet.add('paloma');
+for (var n = 0; n < a; n++) {
+    mySet.add(n);
+}
+var end = new Date().getTime();
 
-console.log("Tiempo de ejecucion del set.add: " );
-console.timeEnd('loop');
+console.log("Set.add: " + (end - start) / 1000 + " segundos.");
 
-console.time('loop');
+//Añadir con push
+var start = new Date().getTime();
 
-frutas = frutas.push('Naranja');
+for (var n = 0; n < a; n++) {
+    array.push(n);
+}
+var end = new Date().getTime();
 
-console.log("Tiempo de ejecucion del array.push: " );
-console.timeEnd('loop');
+console.log("Array.push: " + (end - start) / 1000 + " segundos.");
 
-console.time('loop');
+//Eliminar con delete
+var start = new Date().getTime();
 
-mySet.delete(1);
+mySet.delete(n);
 
-console.log("Tiempo de ejecucion del set.delete: " );
-console.timeEnd('loop');
+var end = new Date().getTime();
 
-console.time('loop');
+console.log("Set.delete: " + (end - start) / 1000 + " segundos.");
 
-var ultimo = frutas.pop;
+//Eliminar con pop
 
-console.log("Tiempo de ejecucion del array.shift: " );
-console.timeEnd('loop');
+var start = new Date().getTime();
 
-console.time('loop');
+array.splice(1, 1);
 
-mySet.has(1);
+var end = new Date().getTime();
 
-console.log("Tiempo de ejecucion del set.has: " );
-console.timeEnd('loop');
+console.log("Array.splice: " + (end - start) / 1000 + " segundos.");
 
-console.time('loop');
+//IndexOf
+var start = new Date().getTime();
 
-frutas.indexOf;
+mySet.has(n);
 
-console.log("Tiempo de ejecucion del array.indexOf: " );
-console.timeEnd('loop');
+var end = new Date().getTime();
+
+console.log("Set.has: " + (end - start) / 1000 + " segundos.");
+
+//Has
+
+var start = new Date().getTime();
+
+array.indexOf(n);
+
+var end = new Date().getTime();
+
+console.log("Array.indexOf: " + (end - start) / 1000 + " segundos.");

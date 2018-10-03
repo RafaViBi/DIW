@@ -18,8 +18,8 @@
     border: solid 3px black;
     font-size: 30px;
     font-family: fantasy;
-    text-shadow: 2px 2px grey;
-    background-image: linear-gradient(45deg,blue 44%, red 1%, yellow 55%);
+    text-shadow: 2px 2px 5px black;
+    background-image: linear-gradient(45deg,blue 45%, red 40%, yellow 53%);
 }
 
 .escher {

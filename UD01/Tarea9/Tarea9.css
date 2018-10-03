@@ -1,0 +1,31 @@
+.botones {
+    margin: 20px;
+}
+
+.botones a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 3px;
+}
+
+.cool {
+    background-color: red;
+}
+
+.mondrian {
+    border: solid 3px black;
+    font-size: 30px;
+    font-family: fantasy;
+    text-shadow: 2px 2px grey;
+    background-image: linear-gradient(45deg,blue 44%, red 1%, yellow 55%);
+}
+
+.escher {
+    border: solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    background-image: repeating-linear-gradient(120deg,grey, black 10%);
+    font-style: italic;
+}

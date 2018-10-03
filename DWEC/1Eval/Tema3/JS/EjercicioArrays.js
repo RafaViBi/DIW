@@ -1,6 +1,6 @@
 var mySet = new Set();
 var array = new Array();
-var a = 500000;
+var a = 1000000;
 
 //Añadir con add
 var start = new Date().getTime();
@@ -41,7 +41,7 @@ var end = new Date().getTime();
 
 console.log("Array.splice: " + (end - start) / 1000 + " segundos.");
 
-//IndexOf
+//Has
 var start = new Date().getTime();
 
 mySet.has(n);
@@ -50,7 +50,7 @@ var end = new Date().getTime();
 
 console.log("Set.has: " + (end - start) / 1000 + " segundos.");
 
-//Has
+//IndexOf
 
 var start = new Date().getTime();
 

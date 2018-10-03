@@ -7,11 +7,13 @@
     color: white;
     text-decoration: none;
     box-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px black;
     border-radius: 3px;
 }
 
 .cool {
-    background-color: red;
+    background-color:rgb(200, 0, 0);
+    font-size: 15px;
 }
 
 .mondrian {

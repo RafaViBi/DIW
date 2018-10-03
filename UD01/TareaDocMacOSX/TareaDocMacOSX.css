@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+li:hover {
+    color: white;
+}
+
+li img {
+    display: block;
+    align-items: center;
+    padding: 14px 16px;
+    transform: 5s;
+}
+
+li img:hover {
+    width: 300px;
+    height: 300px;
+}
+
+li p {
+    opacity: 0;
+}
+
+li p:hover {
+    opacity: 1;
+}

@@ -13,13 +13,13 @@ li {
     color: #333;
 }
 
-li img {
+.animation{
     display: block;
     align-items: center;
     padding: 14px 16px;
 }
 
-li img:hover {
+.animation:hover {
     width: 300px;
     height: 300px;
 }

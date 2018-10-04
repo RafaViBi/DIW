@@ -20,30 +20,26 @@ function validarIp(x) {
     }
 }
 
-function validarDNI(x) {
+function validarDNI(dni) {
     var numero
+    var letr
     var letra
-    var ExpDNI = /^\d{8}[a-zA-Z]$/;
-    var DNI = x.value
-    dni = DNI.toUpperCase;
+    var expresion_regular_dni
 
-    if (ExpDNI.test(dni) == true) {
+    expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
 
-        numero = dni.substr(0, dni.length - 1);
-        letr = dni.substr(dni.length - 1, 1);
+    if (expresion_regular_dni.test((dni.value)) == true) {
+        numero = (dni.value).substr(0, (dni.value).length - 1);
+        letr = (dni.value).substr((dni.value).length - 1, 1);
         numero = numero % 23;
         letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
-        letra = letra.substr(numero, numero + 1);
-
-        if (letra != letr) {
+        letra = letra.substring(numero, numero + 1);
+        if (letra != letr.toUpperCase()) {
             document.getElementById('dni').style.color = 'red';
         } else {
-            document.getElementById('dni').style.color = 'green';
+            document.getElementById("dni").style.color = 'green'; //Cambiar de color a verde si esta bien
         }
-
     } else {
-
         document.getElementById('dni').style.color = 'red';
-
     }
 }

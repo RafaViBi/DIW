@@ -1,3 +1,19 @@
+var passwd = "";
+
+function validarNombre(x) {
+
+    x.value =(x.value).charAt(0).toUpperCase() + (x.value).slice(1);
+
+}
+
+function validarApellidos(x) {
+
+    var apellidos = x.value.split(" ");
+    
+    x.value =(apellidos[0]).charAt(0).toUpperCase() + (apellidos[0]).slice(1) + " " + (apellidos[1]).charAt(0).toUpperCase() + (apellidos[1]).slice(1)
+
+}
+
 function validarEmail(x) {
 
     email = x.value;
@@ -42,4 +58,27 @@ function validarDNI(dni) {
     } else {
         document.getElementById('dni').style.color = 'red';
     }
+}
+
+function validarPasswd(contra) {
+
+    expresion_regular_passwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)([A-Za-z]|[^ ]){8,}$/;
+    passwd = contra.value;
+
+    if (expresion_regular_passwd.test(passwd) == true) {
+        document.getElementById('passwd').style.color = 'green';
+    } else {
+        document.getElementById('passwd').style.color = 'red';
+    }
+
+}
+
+function repPasswd(contrasenya) {
+
+    if (passwd == contrasenya.value) {
+        document.getElementById('reppasswd').style.color = 'green';
+    } else {
+        document.getElementById('reppasswd').style.color = 'red';
+    }
+
 }

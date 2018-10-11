@@ -1,0 +1,27 @@
+#uno {
+    width: 50%;
+    height: 50%;
+    float: left;
+    background-color: blue;
+}
+
+#dos {
+    width: 50%;
+    height: 50%;
+    float: right;
+    background-color: green;
+}
+
+#tres {
+    width: 50%;
+    height: 50%;
+    float: left;
+    background-color: red;
+}
+
+#cuatro {
+    width: 50%;
+    height: 50%;
+    float: right;
+    background-color: black;
+}

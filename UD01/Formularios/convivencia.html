@@ -83,7 +83,7 @@
             <label class="form-check-label" for="opcionD">
                 d) realització de les següents tasques educadores:
             </label>
-            <select class="col-sm-12" name="" id="">
+            <select class="col-sm-12" id="tareas">
                 <option value=""></option>
             </select>
             els dies
@@ -110,7 +110,7 @@
             <input class="form-check-input" type="checkbox" value="" id="opcionF">
             <label class="form-check-label" for="opcionF">
                 f) suspensió del dret de l'assistència a les classes de
-                <select class="col-sm-4" name="" id="">
+                <select class="col-sm-4" id="asignaturas">
                     <option value=""></option>
                 </select>
                 des de
@@ -125,39 +125,29 @@
             <textarea class="form-control" id="descIncidente" rows="3"></textarea>
         </div>
         <div class="form-group">
-            <label for="descIncidente">Descripció de l'indicent:</label>
-            <textarea class="form-control" id="descIncidente" rows="3"></textarea>
+            <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 35:</label>
+            <select class="col-sm-12" id="tipificacion">
+                <option value=""></option>
+            </select>
         </div>
-    </form>
-
-    <form class="form-inline">
-
-        <!-- <div class="cabecera">
-
+        <div class="form-group">
+            <label for="telefono">La comunicació als pares es fa pels següents mitjans: Tèlefon</label>
+            <input type="text" class="col-sm-2" id="alumno">
         </div>
-
-        <h1 class="titulo">COMUNICACIÓ DE MESURES CORRECTORES</h1>
-
-
-        <div>
-            <p>
-                Tipificació (3) de l'indicent segons l'article 35:
-            </p>
-            <textarea name="tipificacion" id="" cols="30" rows="10"></textarea>
+        <div class="form-group">
+            <label class="col-sm-3">Per correu</label>
+            <label class="col-sm-4">Per mig de l'alumne</label>
+            <label class="col-sm-4">Amb compareixença del pare/mare/tutor legal</label>
         </div>
-
-        <div class="final">
-            <pre>
-                La comunicació als pares es fa pels següents mitjans: Tèlefon
-
-                Per correu          Per mig de l'alumne         Amb compareixença del pare/mare
-                                                                    Paiporta,       de          de 201
-                
-                                                                    
-                Signatura del professor/a                            Signatura del cap d'estudis/director                                                   
-
-            </pre>
-        </div> -->
+        <div class="form-group">
+            <label class="col-sm-8"></label>
+            <label class="">Paiporta,</label>
+            <input type="date" id="fechaFirma">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-5">Signatura del professor/a</label>
+            <label class="col-sm-5">Signatura del cap d'estudis/director</label>
+        </div>
     </form>
 
 </body>

@@ -15,12 +15,12 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="convivencia.js"></script>
 </head>
 
 <body>
     <h1>COMUNICACIÓ DE MESURES CORRECTORES</h1>
-    <form>
+    <form id="parte">
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
             <div class="col-sm-7">
@@ -127,7 +127,25 @@
         <div class="form-group">
             <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 35:</label>
             <select class="col-sm-12" id="tipificacion">
-                <option value=""></option>
+                <option value="">Les faltes de puntualitat injustificades</option>
+                <option value="">Les faltes d'assistència injustificades</option>
+                <option value="">Els actes que alteren el normal desenvolupament de les activitats del centre educatiu, especialment els que alteren el normal desenvolupament de les classes</option>
+                <option value="">Els actes d'indisciplina</option>
+                <option value="">Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els membres de la comunitat educativa</option>
+                <option value="">El furt o deteriorament intencionat d'inmobles, materials, documentació o recursos del centre</option>
+                <option value="">El furt o deteriorament intencionat dels béns o materials dels membres de la comunitat educativa</option>
+                <option value="">Les accions que puguen ser perjudicials per a la integritat i la salut dels membres de la comunitat educativa</option>
+                <option value="">La negativa sistemàtica a portar el material necessari per al desenvolupament del procés d'ensenyament-aprenentatge</option>
+                <option value="">La negativa a traslladar la informació facilitada als pares, mares, tutors o tutores per part del centre i viceversa</option>
+                <option value="">L'alteració o manipulació de la documentació facilitada als pares, mares, tutors o tutores per part del centre</option>
+                <option value="">La suplantació de la personalitat dels membres de la comunitat escolar</option>
+                <option value="">La utilització inadequada de les tecnologies de la informació i comunicació durant les activitats que es realitzen al centre educatiu</option>
+                <option value="">L'ús de telèfons mòbils, aparells de so i altres aparells electrònics aliens al procés d'ensenyament-aprenentatge. Durant les activitats que es realitzen al centre educatiu</option>
+                <option value="">Els actes que dificulten o impedisquen el dret i el deure d l'estudi dels seus companys i companyes</option>
+                <option value="">La incitació o estímul a cometre una falta contrària a les normes de convivència</option>
+                <option value="">La negativa al compliment de les mesures correctores adoptades davant de conductes contràries a les normes de convivència</option>
+                <option value="">L'ús inadequat de les infraestructures i béns o equips materials del centre</option>
+                <option value="">La desobediència en el compliment de les normes de caràcter propi del centre i que estiguen incloses en el seu projecte educatiu</option>
             </select>
         </div>
         <div class="form-group">
@@ -148,8 +166,9 @@
             <label class="col-sm-5">Signatura del professor/a</label>
             <label class="col-sm-5">Signatura del cap d'estudis/director</label>
         </div>
+        <input type="submit" onsubmit="return onSubmit(this)">
     </form>
-
+    
 </body>
 
 </html>

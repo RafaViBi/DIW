@@ -1,27 +1,86 @@
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 #uno {
     width: 50%;
     height: 50%;
+    background-color: #000;
     float: left;
-    background-color: blue;
+    color: white;
 }
 
 #dos {
     width: 50%;
     height: 50%;
-    float: right;
-    background-color: green;
+    background-color: #424242;
+    float: left;
 }
 
 #tres {
     width: 50%;
     height: 50%;
+    background-color: #848484;
     float: left;
-    background-color: red;
 }
 
 #cuatro {
     width: 50%;
     height: 50%;
-    float: right;
-    background-color: black;
+    background-color: #BDBDBD;
+    float: left;
 }
+
+.b1 {
+    float: left;
+    margin-top: 45%;
+    margin-left: 45%; 
+    z-index: 1;
+    position: relative;
+    /* boton derecha */
+}
+
+.b2 {
+    float: left;
+    margin-top: 22.5%;
+    margin-left: -2.5%; 
+    z-index: 1;
+    position: relative;
+    /* boton arriba */
+}
+
+.b3 {
+    float: left;
+    margin-top: 22.5%;
+    margin-left: 97.5%; 
+    z-index: 1;
+    position: relative;
+    /* boton abajo */
+}
+
+.b4 {
+    float: left;
+    margin-top: -1.5%;
+    margin-left: 45%; 
+    z-index: 1;
+    position: relative;
+    /* boton izquierda */
+}
+
+/* button {
+    margin-top: 20%;
+    margin-left: 37.5%;
+}
+
+p {
+    margin-top: 22.5%;
+}
+
+textarea {
+    margin-top: 22%;
+    margin-left: 35%;
+}
+ */

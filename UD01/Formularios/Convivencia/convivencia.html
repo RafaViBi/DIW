@@ -19,8 +19,9 @@
 </head>
 
 <body>
-    <h1>COMUNICACIÓ DE MESURES CORRECTORES</h1>
-    <form onsubmit="return onSubmit(this)" >
+    <h1>INCIDÈNCIA</h1>
+
+    <form onsubmit="return onSubmit(this)">
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
             <div class="col-sm-7">
@@ -55,120 +56,153 @@
                 <input name="lugarIncidente" type="text" class="form-control" id="lugar">
             </div>
         </div>
-        <p>En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne la
-            imposició de la següent mesura correctora:</p>
-        <div class="form-check">
-            <input name="opcionA" class="form-check-input" type="checkbox" value="" id="opcionA">
-            <label class="form-check-label" for="opcionA">
-                a) compareixença davant d'estudis/director
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="opcionB" class="form-check-input" type="checkbox" value="" id="opcionB">
-            <label class="form-check-label" for="opcionB">
-                b) retirada d'aparells electrònics (1)
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="opcionC" class="form-check-input" type="checkbox" value="" id="opcionC">
-            <label class="form-check-label" for="opcionC">
-                c) privació del temps de recreació els dies
-                <input type="date">
-                hasta
-                <input type="date">
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="opcionD" class="form-check-input" type="checkbox" value="" id="opcionD">
-            <label class="form-check-label" for="opcionD">
-                d) realització de les següents tasques educadores:
-            </label>
-            <select class="col-sm-12" id="tareas">
-                <option value=""></option>
-            </select>
-            els dies
-            <input name="fechaTareaInicio" type="date">
-            fins a
-            <input name="fechaTareaFin" type="date">
-            i amb l'horari
-            <input name="horaTareaInicio" type="time">
-            fins a
-            <input name="horaTareaFin" type="time">
-        </div>
-        <div class="form-check">
-            <input name="opcionE" class="form-check-input" type="checkbox" value="" id="opcionE">
-            <label class="form-check-label" for="opcionE">
-                e) suspensió del dret a participar en activitats extraescolars i complementàries des de
-                els dies
-                <input name="fechaSuspActInicio" type="date">
-                fins a
-                <input name="fechaSuspActFin" type="date">
-                (2)
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="opcionF" class="form-check-input" type="checkbox" value="" id="opcionF">
-            <label class="form-check-label" for="opcionF">
-                f) suspensió del dret de l'assistència a les classes de
-                <select class="col-sm-4" id="asignaturas">
+
+        <input type="button" value="LLEU" onclick="visibilidadLeve()">
+        <input type="button" value="GREU" onclick="visibilidadGrave()">
+
+        <div id="leve">
+            <p>En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne
+                la
+                imposició de la següent mesura correctora:</p>
+            <div class="form-check">
+                <input name="opcionA" class="form-check-input" type="checkbox" value="" id="opcionA">
+                <label class="form-check-label" for="opcionA">
+                    a) compareixença davant d'estudis/director
+                </label>
+            </div>
+            <div class="form-check">
+                <input name="opcionB" class="form-check-input" type="checkbox" value="" id="opcionB">
+                <label class="form-check-label" for="opcionB">
+                    b) retirada d'aparells electrònics (1)
+                </label>
+            </div>
+            <div class="form-check">
+                <input name="opcionC" class="form-check-input" type="checkbox" value="" id="opcionC">
+                <label class="form-check-label" for="opcionC">
+                    c) privació del temps de recreació els dies
+                    <input type="date">
+                    hasta
+                    <input type="date">
+                </label>
+            </div>
+            <div class="form-check">
+                <input name="opcionD" class="form-check-input" type="checkbox" value="" id="opcionD">
+                <label class="form-check-label" for="opcionD">
+                    d) realització de les següents tasques educadores:
+                </label>
+                <select class="col-sm-12" id="tareas">
                     <option value=""></option>
                 </select>
-                des de
-                <input name="fechaSuspAsisInicio" type="date">
+                els dies
+                <input name="fechaTareaInicio" type="date">
                 fins a
-                <input name="fechaSuspAsisFin" type="date">
-                (2).
-            </label>
+                <input name="fechaTareaFin" type="date">
+                i amb l'horari
+                <input name="horaTareaInicio" type="time">
+                fins a
+                <input name="horaTareaFin" type="time">
+            </div>
+            <div class="form-check">
+                <input name="opcionE" class="form-check-input" type="checkbox" value="" id="opcionE">
+                <label class="form-check-label" for="opcionE">
+                    e) suspensió del dret a participar en activitats extraescolars i complementàries des de
+                    els dies
+                    <input name="fechaSuspActInicio" type="date">
+                    fins a
+                    <input name="fechaSuspActFin" type="date">
+                    (2)
+                </label>
+            </div>
+            <div class="form-check">
+                <input name="opcionF" class="form-check-input" type="checkbox" value="" id="opcionF">
+                <label class="form-check-label" for="opcionF">
+                    f) suspensió del dret de l'assistència a les classes de
+                    <select class="col-sm-4" id="asignaturas">
+                        <option value=""></option>
+                    </select>
+                    des de
+                    <input name="fechaSuspAsisInicio" type="date">
+                    fins a
+                    <input name="fechaSuspAsisFin" type="date">
+                    (2).
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="descIncidente">Descripció de l'indicent:</label>
+                <textarea name="descripcionIncidente" class="form-control" id="descIncidente" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 35:</label>
+                <select name="tipificacion" class="col-sm-12" id="tipificacion" multiple>
+                    <option value="a">Les faltes de puntualitat injustificades</option>
+                    <option value="b">Les faltes d'assistència injustificades</option>
+                    <option value="c">Els actes que alteren el normal desenvolupament de les activitats del centre
+                        educatiu, especialment els que alteren el normal desenvolupament de les classes</option>
+                    <option value="d">Els actes d'indisciplina</option>
+                    <option value="e">Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els
+                        membres de la comunitat educativa</option>
+                    <option value="f">El furt o deteriorament intencionat d'inmobles, materials, documentació o
+                        recursos
+                        del centre</option>
+                    <option value="g">El furt o deteriorament intencionat dels béns o materials dels membres de la
+                        comunitat educativa</option>
+                    <option value="h">Les accions que puguen ser perjudicials per a la integritat i la salut dels
+                        membres de la comunitat educativa</option>
+                    <option value="i">La negativa sistemàtica a portar el material necessari per al desenvolupament del
+                        procés d'ensenyament-aprenentatge</option>
+                    <option value="j">La negativa a traslladar la informació facilitada als pares, mares, tutors o
+                        tutores per part del centre i viceversa</option>
+                    <option value="k">L'alteració o manipulació de la documentació facilitada als pares, mares, tutors
+                        o
+                        tutores per part del centre</option>
+                    <option value="l">La suplantació de la personalitat dels membres de la comunitat escolar</option>
+                    <option value="m">La utilització inadequada de les tecnologies de la informació i comunicació
+                        durant
+                        les activitats que es realitzen al centre educatiu</option>
+                    <option value="n">L'ús de telèfons mòbils, aparells de so i altres aparells electrònics aliens al
+                        procés d'ensenyament-aprenentatge. Durant les activitats que es realitzen al centre educatiu</option>
+                    <option value="o">Els actes que dificulten o impedisquen el dret i el deure d l'estudi dels seus
+                        companys i companyes</option>
+                    <option value="p">La incitació o estímul a cometre una falta contrària a les normes de convivència</option>
+                    <option value="q">La negativa al compliment de les mesures correctores adoptades davant de
+                        conductes
+                        contràries a les normes de convivència</option>
+                    <option value="r">L'ús inadequat de les infraestructures i béns o equips materials del centre</option>
+                    <option value="s">La desobediència en el compliment de les normes de caràcter propi del centre i
+                        que
+                        estiguen incloses en el seu projecte educatiu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="telefono">La comunicació als pares es fa pels següents mitjans: Tèlefon</label>
+                <input name="telfPadres" type="text" class="col-sm-2" id="alumno">
+            </div>
+            <div class="form-group">
+                <label for="emailPadres" class="col-sm-1">Per correu</label>
+                <input type="email" class="col-sm-2" id="emailPadres" placeholder="name@example.com">
+                <label class="col-sm-4">Per mig de l'alumne</label>
+
+                <label class="col-sm-4">Amb compareixença del pare/mare/tutor legal</label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-8"></label>
+                <label class="">Paiporta,</label>
+                <input name="fechaFirma" type="date" id="fechaFirma">
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5">Signatura del professor/a</label>
+                <label class="col-sm-5">Signatura del cap d'estudis/director</label>
+            </div>
+            <input type="submit" onsubmit="return onSubmit(this)">
         </div>
-        <div class="form-group">
-            <label for="descIncidente">Descripció de l'indicent:</label>
-            <textarea name="descripcionIncidente" class="form-control" id="descIncidente" rows="3"></textarea>
+        <div id="grave">
+            <p>En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne
+                la
+                imposició de la següent mesura correctora:</p>
+            <input type="submit" onsubmit="return onSubmit(this)">
         </div>
-        <div class="form-group">
-            <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 35:</label>
-            <select class="col-sm-12" id="tipificacion">
-                <option value="">Les faltes de puntualitat injustificades</option>
-                <option value="">Les faltes d'assistència injustificades</option>
-                <option value="">Els actes que alteren el normal desenvolupament de les activitats del centre educatiu, especialment els que alteren el normal desenvolupament de les classes</option>
-                <option value="">Els actes d'indisciplina</option>
-                <option value="">Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els membres de la comunitat educativa</option>
-                <option value="">El furt o deteriorament intencionat d'inmobles, materials, documentació o recursos del centre</option>
-                <option value="">El furt o deteriorament intencionat dels béns o materials dels membres de la comunitat educativa</option>
-                <option value="">Les accions que puguen ser perjudicials per a la integritat i la salut dels membres de la comunitat educativa</option>
-                <option value="">La negativa sistemàtica a portar el material necessari per al desenvolupament del procés d'ensenyament-aprenentatge</option>
-                <option value="">La negativa a traslladar la informació facilitada als pares, mares, tutors o tutores per part del centre i viceversa</option>
-                <option value="">L'alteració o manipulació de la documentació facilitada als pares, mares, tutors o tutores per part del centre</option>
-                <option value="">La suplantació de la personalitat dels membres de la comunitat escolar</option>
-                <option value="">La utilització inadequada de les tecnologies de la informació i comunicació durant les activitats que es realitzen al centre educatiu</option>
-                <option value="">L'ús de telèfons mòbils, aparells de so i altres aparells electrònics aliens al procés d'ensenyament-aprenentatge. Durant les activitats que es realitzen al centre educatiu</option>
-                <option value="">Els actes que dificulten o impedisquen el dret i el deure d l'estudi dels seus companys i companyes</option>
-                <option value="">La incitació o estímul a cometre una falta contrària a les normes de convivència</option>
-                <option value="">La negativa al compliment de les mesures correctores adoptades davant de conductes contràries a les normes de convivència</option>
-                <option value="">L'ús inadequat de les infraestructures i béns o equips materials del centre</option>
-                <option value="">La desobediència en el compliment de les normes de caràcter propi del centre i que estiguen incloses en el seu projecte educatiu</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="telefono">La comunicació als pares es fa pels següents mitjans: Tèlefon</label>
-            <input name="telfPadres" type="text" class="col-sm-2" id="alumno">
-        </div>
-        <div class="form-group">
-            <label class="col-sm-3">Per correu</label>
-            <label class="col-sm-4">Per mig de l'alumne</label>
-            <label class="col-sm-4">Amb compareixença del pare/mare/tutor legal</label>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-8"></label>
-            <label class="">Paiporta,</label>
-            <input name="fechaFirma" type="date" id="fechaFirma">
-        </div>
-        <div class="form-group">
-            <label class="col-sm-5">Signatura del professor/a</label>
-            <label class="col-sm-5">Signatura del cap d'estudis/director</label>
-        </div>
-        <input type="submit" onsubmit="return onSubmit(this)">
     </form>
-    
+
 </body>
 
 </html>

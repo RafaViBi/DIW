@@ -25,3 +25,13 @@ div {
 #opcionF {
     margin-top: 0.7%;
 }
+
+#leve {
+    position: absolute;
+    visibility: hidden;
+}
+
+#grave {
+    position: absolute;
+    visibility: hidden;
+}

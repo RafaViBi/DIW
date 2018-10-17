@@ -20,57 +20,57 @@
 
 <body>
     <h1>COMUNICACIÓ DE MESURES CORRECTORES</h1>
-    <form id="parte">
+    <form onsubmit="return onSubmit(this)" >
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
             <div class="col-sm-7">
-                <input type="text" class="form-control" id="alumno">
+                <input name="nombreAlumno" type="text" class="form-control" id="alumno">
             </div>
             <label for="grupo" class="col-sm-1 col-form-label">GRUP</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="grupo">
+                <input name="grupoAlumno" type="text" class="form-control" id="grupo">
             </div>
         </div>
         <div class="form-group row">
             <label for="profesor" class="col-sm-2 col-form-label">PROFESSOR/A</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="profesor">
+                <input name="nombreProfesor" type="text" class="form-control" id="profesor">
             </div>
             <label for="horari" class="col-sm-2 col-form-label">Horari d'atenció</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="horari">
+                <input name="horarioAtencion" type="text" class="form-control" id="horari">
             </div>
         </div>
         <div class="form-group row">
             <label for="fecha" class="col-sm-2 col-form-label">Data de l'incident</label>
             <div class="col-sm-3">
-                <input type="date" class="form-control" id="fecha">
+                <input name="fechaIncidente" type="date" class="form-control" id="fecha">
             </div>
             <label for="hora" class="col-sm-1 col-form-label">Hora</label>
             <div class="col-sm-2">
-                <input type="time" class="form-control" id="hora">
+                <input name="horaIncidente" type="time" class="form-control" id="hora">
             </div>
             <label for="lugar" class="col-sm-2 col-form-label">Lloc</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="lugar">
+                <input name="lugarIncidente" type="text" class="form-control" id="lugar">
             </div>
         </div>
         <p>En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne la
             imposició de la següent mesura correctora:</p>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="opcionA">
+            <input name="opcionA" class="form-check-input" type="checkbox" value="" id="opcionA">
             <label class="form-check-label" for="opcionA">
                 a) compareixença davant d'estudis/director
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="opcionB">
+            <input name="opcionB" class="form-check-input" type="checkbox" value="" id="opcionB">
             <label class="form-check-label" for="opcionB">
                 b) retirada d'aparells electrònics (1)
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="opcionC">
+            <input name="opcionC" class="form-check-input" type="checkbox" value="" id="opcionC">
             <label class="form-check-label" for="opcionC">
                 c) privació del temps de recreació els dies
                 <input type="date">
@@ -79,7 +79,7 @@
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="opcionD">
+            <input name="opcionD" class="form-check-input" type="checkbox" value="" id="opcionD">
             <label class="form-check-label" for="opcionD">
                 d) realització de les següents tasques educadores:
             </label>
@@ -87,42 +87,42 @@
                 <option value=""></option>
             </select>
             els dies
-            <input type="date">
+            <input name="fechaTareaInicio" type="date">
             fins a
-            <input type="date">
+            <input name="fechaTareaFin" type="date">
             i amb l'horari
-            <input type="time">
+            <input name="horaTareaInicio" type="time">
             fins a
-            <input type="time">
+            <input name="horaTareaFin" type="time">
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="opcionE">
+            <input name="opcionE" class="form-check-input" type="checkbox" value="" id="opcionE">
             <label class="form-check-label" for="opcionE">
                 e) suspensió del dret a participar en activitats extraescolars i complementàries des de
                 els dies
-                <input type="date">
+                <input name="fechaSuspActInicio" type="date">
                 fins a
-                <input type="date">
+                <input name="fechaSuspActFin" type="date">
                 (2)
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="opcionF">
+            <input name="opcionF" class="form-check-input" type="checkbox" value="" id="opcionF">
             <label class="form-check-label" for="opcionF">
                 f) suspensió del dret de l'assistència a les classes de
                 <select class="col-sm-4" id="asignaturas">
                     <option value=""></option>
                 </select>
                 des de
-                <input type="date">
+                <input name="fechaSuspAsisInicio" type="date">
                 fins a
-                <input type="date">
+                <input name="fechaSuspAsisFin" type="date">
                 (2).
             </label>
         </div>
         <div class="form-group">
             <label for="descIncidente">Descripció de l'indicent:</label>
-            <textarea class="form-control" id="descIncidente" rows="3"></textarea>
+            <textarea name="descripcionIncidente" class="form-control" id="descIncidente" rows="3"></textarea>
         </div>
         <div class="form-group">
             <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 35:</label>
@@ -150,7 +150,7 @@
         </div>
         <div class="form-group">
             <label for="telefono">La comunicació als pares es fa pels següents mitjans: Tèlefon</label>
-            <input type="text" class="col-sm-2" id="alumno">
+            <input name="telfPadres" type="text" class="col-sm-2" id="alumno">
         </div>
         <div class="form-group">
             <label class="col-sm-3">Per correu</label>
@@ -160,7 +160,7 @@
         <div class="form-group">
             <label class="col-sm-8"></label>
             <label class="">Paiporta,</label>
-            <input type="date" id="fechaFirma">
+            <input name="fechaFirma" type="date" id="fechaFirma">
         </div>
         <div class="form-group">
             <label class="col-sm-5">Signatura del professor/a</label>

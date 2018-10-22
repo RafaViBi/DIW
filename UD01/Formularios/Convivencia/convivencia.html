@@ -59,7 +59,7 @@
 
         <input type="button" value="LLEU" onclick="visibilidadLeve()">
         <input type="button" value="GREU" onclick="visibilidadGrave()">
-
+        <!--Formulario para parte leve-->
         <div id="leve">
             <p>En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne
                 la
@@ -134,41 +134,41 @@
             <div class="form-group">
                 <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 35:</label>
                 <select name="tipificacion" class="col-sm-12" id="tipificacion" multiple>
-                    <option value="a">Les faltes de puntualitat injustificades</option>
-                    <option value="b">Les faltes d'assistència injustificades</option>
-                    <option value="c">Els actes que alteren el normal desenvolupament de les activitats del centre
+                    <option value="1">Les faltes de puntualitat injustificades</option>
+                    <option value="2">Les faltes d'assistència injustificades</option>
+                    <option value="3">Els actes que alteren el normal desenvolupament de les activitats del centre
                         educatiu, especialment els que alteren el normal desenvolupament de les classes</option>
-                    <option value="d">Els actes d'indisciplina</option>
-                    <option value="e">Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els
+                    <option value="4">Els actes d'indisciplina</option>
+                    <option value="5">Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els
                         membres de la comunitat educativa</option>
-                    <option value="f">El furt o deteriorament intencionat d'inmobles, materials, documentació o
+                    <option value="6">El furt o deteriorament intencionat d'inmobles, materials, documentació o
                         recursos
                         del centre</option>
-                    <option value="g">El furt o deteriorament intencionat dels béns o materials dels membres de la
+                    <option value="7">El furt o deteriorament intencionat dels béns o materials dels membres de la
                         comunitat educativa</option>
-                    <option value="h">Les accions que puguen ser perjudicials per a la integritat i la salut dels
+                    <option value="8">Les accions que puguen ser perjudicials per a la integritat i la salut dels
                         membres de la comunitat educativa</option>
-                    <option value="i">La negativa sistemàtica a portar el material necessari per al desenvolupament del
+                    <option value="9">La negativa sistemàtica a portar el material necessari per al desenvolupament del
                         procés d'ensenyament-aprenentatge</option>
-                    <option value="j">La negativa a traslladar la informació facilitada als pares, mares, tutors o
+                    <option value="10">La negativa a traslladar la informació facilitada als pares, mares, tutors o
                         tutores per part del centre i viceversa</option>
-                    <option value="k">L'alteració o manipulació de la documentació facilitada als pares, mares, tutors
+                    <option value="11">L'alteració o manipulació de la documentació facilitada als pares, mares, tutors
                         o
                         tutores per part del centre</option>
-                    <option value="l">La suplantació de la personalitat dels membres de la comunitat escolar</option>
-                    <option value="m">La utilització inadequada de les tecnologies de la informació i comunicació
+                    <option value="12">La suplantació de la personalitat dels membres de la comunitat escolar</option>
+                    <option value="13">La utilització inadequada de les tecnologies de la informació i comunicació
                         durant
                         les activitats que es realitzen al centre educatiu</option>
-                    <option value="n">L'ús de telèfons mòbils, aparells de so i altres aparells electrònics aliens al
+                    <option value="14">L'ús de telèfons mòbils, aparells de so i altres aparells electrònics aliens al
                         procés d'ensenyament-aprenentatge. Durant les activitats que es realitzen al centre educatiu</option>
-                    <option value="o">Els actes que dificulten o impedisquen el dret i el deure d l'estudi dels seus
+                    <option value="15">Els actes que dificulten o impedisquen el dret i el deure d l'estudi dels seus
                         companys i companyes</option>
-                    <option value="p">La incitació o estímul a cometre una falta contrària a les normes de convivència</option>
-                    <option value="q">La negativa al compliment de les mesures correctores adoptades davant de
+                    <option value="16">La incitació o estímul a cometre una falta contrària a les normes de convivència</option>
+                    <option value="17">La negativa al compliment de les mesures correctores adoptades davant de
                         conductes
                         contràries a les normes de convivència</option>
-                    <option value="r">L'ús inadequat de les infraestructures i béns o equips materials del centre</option>
-                    <option value="s">La desobediència en el compliment de les normes de caràcter propi del centre i
+                    <option value="18">L'ús inadequat de les infraestructures i béns o equips materials del centre</option>
+                    <option value="19">La desobediència en el compliment de les normes de caràcter propi del centre i
                         que
                         estiguen incloses en el seu projecte educatiu</option>
                 </select>
@@ -195,12 +195,47 @@
             </div>
             <input type="submit" onsubmit="return onSubmit(this)">
         </div>
+        <!--Fin formulario para parte leve-->
+        <!--Formulario para parte grave-->
         <div id="grave">
-            <p>En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne
-                la
-                imposició de la següent mesura correctora:</p>
+            <div class="form-group">
+                <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 42:</label>
+                <select name="tipificacion" class="col-sm-12" id="tipificacion" multiple>
+                    <option value="1">Els actes greus d'indisciplina i les injuries i ofenses contra membres de la
+                        comunitat educativa que sobrepassen incorrecció o la desconsideració previstes en el article
+                        35.</option>
+                    <option value="2">L'agressio fisica o moral, les amenaces i coaccions i la discriminacio greu a
+                        qualsevol membre de la comunitat educativa, aixi com la falta de respecte grey a la integritat
+                        i dignitat personal.</option>
+                    <option value="3">Les vexacio i humillacions a qualsevol membre de la comunitat escolar,
+                        particularment si tenen un comportament sexista o xenòfon, aixi com les que es realitzen contra
+                        els members mes vulnerables per les seues caracteristiques personals, socials o educatives.</option>
+                    <option value="4">L'assetjament escolar.</option>
+                    <option value="5">La suplantació de personalitat en actes de la vida docent.</option>
+                    <option value="6">La falsificacio, el detoriorament o la sustracció de documentació academica</option>
+                    <option value="7">Els danys greys causats en el locals, materials o documents del centro o ens el
+                        bens dels membres de la comunitat educativa.</option>
+                    <option value="8">Els actes injustificats que pertorben greument el normal desenvolupament del
+                        centre o ens el bens dels members de la comunitat educativa.</option>
+                    <option value="9">Les actuacions que purguen perjudicar perjudiquen greument la salut i la
+                        integritat personal dels members de la comunitat educativa.</option>
+                    <option value="10">La introduccio en el centre d'objectes perillosos o substancies perjudicals per
+                        a la salut i la integritat personal dels members de la comunitat educativa</option>
+                    <option value="11">Les conductes tipificades com a contraries a les normes de convivència del
+                        centre educatiu si concorren circumstancies del col·lectiu o publicitat intencionada per
+                        qualsevol mitja</option>
+                    <option value="12">La incitacio o l'estimul a cometre una falta que afecte greument la convicencia
+                        en el centre</option>
+                    <option value="13">La negativa reiterada al compliment de les mesures educatives correctores
+                        adoptades davant de faltes que afecten greument a la convicencia en el centre</option>
+                    <option value="14">L'acces indegut o sense autoritzacio a fitxers i servidors del centre/option>
+                    <option value="15">Actes atemptatoris respecte al projecte educatiu, aixi com al caracter propi del
+                        centre</option>
+                </select>
+            </div>
             <input type="submit" onsubmit="return onSubmit(this)">
         </div>
+        <!--Fin formulario para parte grave-->
     </form>
 
 </body>

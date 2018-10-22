@@ -10,7 +10,7 @@ function sombraInterior(elemento) {
 
 function redondito(elemento) {
     document.getElementById(elemento.id).style.borderRadius="50%";
-    document.getElementById(elemento.id).style.transition="all 3s ease-in-out";
+    document.getElementById(elemento.id).style.transition="all 1.5s ease-in-out";
 }
 
 function holaSombra(elemento) {
@@ -19,13 +19,13 @@ function holaSombra(elemento) {
 }
 
 function eliminarDiv(elemento) {
-    var nodoEliminar = document.getElementById(elemento.id);
-    var empleado = nodoEliminar.parentNode;
+    /*var nodoEliminar = document.getElementById(elemento.id); */
+    var empleado = elemento.parentNode;
     var jefe = empleado.parentNode;
     jefe.removeChild(empleado);
 }
 
 function cuadradito(elemento) {
     document.getElementById(elemento.id).style.borderRadius="0%";
-    document.getElementById(elemento.id).style.transition="none";
+    document.getElementById(elemento.id).style.transition="all 1.5s ease-in-out";
 }

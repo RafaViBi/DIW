@@ -173,25 +173,37 @@
                         estiguen incloses en el seu projecte educatiu</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="telefono">La comunicació als pares es fa pels següents mitjans: Tèlefon</label>
-                <input name="telfPadres" type="text" class="col-sm-2" id="alumno">
-            </div>
-            <div class="form-group">
-                <label for="emailPadres" class="col-sm-1">Per correu</label>
-                <input type="email" class="col-sm-2" id="emailPadres" placeholder="name@example.com">
-                <label class="col-sm-4">Per mig de l'alumne</label>
+            <div>
+                <p>La comunicacó als pares es fa pels següents mitjans: Telefon
+                    <input type="text" name="telefonoPadres" class="col-md-auto" id="telefonPares" placeholder="Telefono">
+                    per correu <input type="email" name="emailPadres" class="col-md-auto" id="emailPadres"
+                        placeholder="Email">
+                    o per mig de l'Alumne. Amb compareixença del pare/madre/tutor legal.
+                </p>
 
-                <label class="col-sm-4">Amb compareixença del pare/mare/tutor legal</label>
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        Paiporta, <input name="fechaHoy" type="date" id="fechaFirma" />
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-8"></label>
-                <label class="">Paiporta,</label>
-                <input name="fechaFirma" type="date" id="fechaFirma">
-            </div>
-            <div class="form-group">
-                <label class="col-sm-5">Signatura del professor/a</label>
-                <label class="col-sm-5">Signatura del cap d'estudis/director</label>
+            <div class="row">
+                <div class="col">
+                    Signatura del professor/a
+                    <div class="custom-file">
+                        <input type="file" name="fiarmaProfesor" class="custom-file-input" id="customFileLang" lang="es">
+                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                    </div>
+                </div>
+                <div class="col">
+                    Signatura del cap d'estudis/director
+                    <div class="custom-file">
+                        <input type="file" name="firmaDirector" class="custom-file-input" id="customFileLang" lang="es">
+                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                    </div>
+                </div>
             </div>
             <input type="submit" onsubmit="return onSubmit(this)">
         </div>
@@ -199,7 +211,7 @@
         <!--Formulario para parte grave-->
         <div id="grave">
             <div class="form-group">
-                <label for="tipificacion">Tipificació (3) de l'indicent segons l'article 42:</label>
+                <label for="tipificacion">Tipificació (1) de l'indicent segons l'article 42:</label>
                 <select name="tipificacion" class="col-sm-12" id="tipificacion" multiple>
                     <option value="1">Els actes greus d'indisciplina i les injuries i ofenses contra membres de la
                         comunitat educativa que sobrepassen incorrecció o la desconsideració previstes en el article
@@ -232,10 +244,41 @@
                     <option value="15">Actes atemptatoris respecte al projecte educatiu, aixi com al caracter propi del
                         centre</option>
                 </select>
+                <div>
+                    <p>La comunicacó als pares es fa pels següents mitjans: Telefon
+                        <input type="text" name="telefonoPadres" class="col-md-auto" id="telefonPares" placeholder="Telefono">
+                        per correu <input type="email" name="emailPadres" class="col-md-auto" id="emailPadres"
+                            placeholder="Email">
+                        o per mig de l'Alumne. Amb compareixença del pare/madre/tutor legal.
+                    </p>
+
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                            Paiporta, <input name="fechaHoy" type="date" id="fechaFirma" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Signatura del professor/a
+                        <div class="custom-file">
+                            <input type="file" name="fiarmaProfesor" class="custom-file-input" id="customFileLang" lang="es">
+                            <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        Signatura del cap d'estudis/director
+                        <div class="custom-file">
+                            <input type="file" name="firmaDirector" class="custom-file-input" id="customFileLang" lang="es">
+                            <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" onsubmit="return onSubmit(this)">
             </div>
-            <input type="submit" onsubmit="return onSubmit(this)">
-        </div>
-        <!--Fin formulario para parte grave-->
+            <!--Fin formulario para parte grave-->
     </form>
 
 </body>

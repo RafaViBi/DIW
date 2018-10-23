@@ -1,11 +1,12 @@
-/* document.getElementById("uno").addEventListener("onclick",coordenadas(),false);
+document.getElementById("uno").addEventListener("click", function (event) {
+    alert("X: " + event.screenX + " Y: " + event.screenY);
+}, false);
 
-function coordenadas(element) {
-    console.log(element.screenX);
-    console.log(element.screenY);
-} */
+document.getElementById("btn1").addEventListener("click",function (event) {
+    alert("Has pulsado el boton " + this.id);
+},false);
 
-document.getElementById("uno").addEventListener("click", function( event ) {
-    console.log(event.screenX);
-    console.log(event.screenY);
-  }, false);
+document.getElementById("btn2").addEventListener("click",function (event) {
+    var x = new Event("click");
+    document.getElementById("btn1").dispatchEvent(x);
+},false);

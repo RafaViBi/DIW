@@ -16,7 +16,7 @@ label {
     background: #D0F5A9;
 }
 
-.nuevo {
+#nuevo {
     width: 100px;
     height: 100px;
     border: 2px solid black;

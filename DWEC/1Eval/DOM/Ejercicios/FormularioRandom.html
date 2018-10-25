@@ -19,21 +19,22 @@
 </head>
 
 <body>
-    <div class="form-inline">
+    <div id="general">
+        <div class="form-inline">
+            <label for="dni">DNI:</label>
+            <input type="text" class="form-control" id="dni" disabled>
 
-        <label for="dni">DNI:</label>
-        <input type="email" class="form-control" id="dni" name="dni" disabled>
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" disabled>
 
-        <label for="nombre">Nombre:</label>
-        <input type="password" class="form-control" id="nombre" name="nombre" disabled>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" class="form-control" id="apellidos" disabled>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="password" class="form-control" id="apellidos" name="apellidos" disabled>
-
-        <button type="" id="eliminar" class="btn btn-default delete">X</button>
-        <button type="" id="anyadir" class="btn btn-default new"><img src="lapiz.png" alt=""></button>
+            <button type="" id="eliminar" class="btn btn-default delete">X</button>
+            <button type="" id="anyadir" class="btn btn-default new"><img src="lapiz.png" alt=""></button>
+        </div>
     </div>
-    <button class="nuevo">+</button>
+    <button id="nuevo">+</button>
 </body>
 
 </html>

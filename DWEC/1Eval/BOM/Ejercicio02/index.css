@@ -1,0 +1,12 @@
+.video {
+    padding-left: 20%;
+}
+
+.controles{
+   margin-left: 29.5%;
+}
+
+#general {
+    margin: 1%;
+    width: calc(99% - 30%);
+}

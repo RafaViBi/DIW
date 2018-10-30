@@ -1,19 +1,14 @@
 document.addEventListener("DOMContentLoaded", cargar, false);
 
-var contador = "1";
+var contador = 0;
 
 function cargar() {
 
-    var anyadir = document.getElementsByClassName("anyadir");
-    for (var i = 0; i < anyadir.length; i++) {
-        anyadir[i].addEventListener('click', editarInputs, false);
-    }
-
-    var eliminar = document.getElementsByClassName("eliminar");
-    for (var i = 0; i < eliminar.length; i++) {
-        eliminar[i].addEventListener('click', preguntaEliminar, false);
-    }
-
+    document.getElementById("anyadir0").addEventListener("click", editarInputs);
+    document.getElementById("eliminar0").addEventListener("click", preguntaEliminar);
+    document.getElementById("inputD0").addEventListener("input", comprobarInputs);
+    document.getElementById("inputN0").addEventListener("input", comprobarInputs);
+    document.getElementById("inputA0").addEventListener("input", comprobarInputs);  
     document.getElementById("nuevo").addEventListener("click", nuevoForm);
 }
 
@@ -32,9 +27,11 @@ function eliminarInputs(element) {
 
 function nuevoForm() {
 
-    idDni = "dni" + contador;
-    idNombre = "nombre" + contador;
-    idApellidos = "apellidos" + contador;
+    idDni = "inputD" + contador;
+    idNombre = "inputN" + contador;
+    idApellidos = "inputA" + contador;
+    idAnyadir = "anyadir" + contador;
+    idEliminar = "eliminar" + contador;
 
     var nodoPadre = document.getElementById("general");
 
@@ -52,7 +49,7 @@ function nuevoForm() {
     input1.setAttribute("id", idDni);
     input1.setAttribute("type", "text");
     input1.disabled = true;
-    input1.addEventListener("blur", comprobarInputs);
+    input1.addEventListener("input", comprobarInputs);
 
     //Nombre
     var label2 = document.createElement("label");
@@ -65,7 +62,7 @@ function nuevoForm() {
     input2.setAttribute("id", idNombre);
     input2.setAttribute("type", "text");
     input2.disabled = true;
-    input2.addEventListener("blur", comprobarInputs);
+    input2.addEventListener("input", comprobarInputs);
 
     //Apellidos
     var label3 = document.createElement("label");
@@ -78,12 +75,13 @@ function nuevoForm() {
     input3.setAttribute("id", idApellidos);
     input3.setAttribute("type", "text");
     input3.disabled = true;
-    input3.addEventListener("blur", comprobarInputs);
+    input3.addEventListener("input", comprobarInputs);
 
     //Botones
     var boton1 = document.createElement("button");
     boton1.setAttribute("class", "eliminar");
     boton1.setAttribute("class", "btn btn-default delete");
+    boton1.setAttribute("id",idEliminar);
     boton1.innerText = "X";
     boton1.addEventListener("click", preguntaEliminar);
     boton1.disabled = true;
@@ -91,6 +89,7 @@ function nuevoForm() {
     var boton2 = document.createElement("button");
     boton2.setAttribute("class", "anyadir");
     boton2.setAttribute("class", "btn btn-default new");
+    boton2.setAttribute("id",idAnyadir);
     boton2.addEventListener("click", editarInputs);
 
     var imagen = document.createElement("img");
@@ -121,19 +120,16 @@ function preguntaEliminar() {
 }
 
 function comprobarInputs() {
-    var cont = 0;
-    var valorInput = this.id;
-    var jefe = valorInput.parentNode;
-    var inputs = jefe.getElementsByTagName("inputs");
-    var eliminar = document.getElementsByClassName(eliminar);
+    var inputId = this.id;
+    var papa = this.parentNode;
+    var inputs = papa.getElementsByTagName("input");
+    var idPillada = inputId.substring(6, inputId.length);
+    var botonEliminar = document.getElementById("eliminar" + idPillada);
 
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].value != "") {
-            cont++;
-        }
-    }
+    if (inputs[0].value != "" && inputs[1].value != "" && inputs[2].value != "") {
+        botonEliminar.disabled = false;
+    } else {
+        botonEliminar.disabled = true;
+}
 
-    if (cont == 2) {
-        alert("WIIII");
-    }
 }

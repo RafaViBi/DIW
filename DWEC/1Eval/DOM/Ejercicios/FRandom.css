@@ -21,7 +21,7 @@ label {
     height: 100px;
     border: 2px solid black;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 10px;
     font-size: 30px;

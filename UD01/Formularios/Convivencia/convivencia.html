@@ -24,8 +24,8 @@
         <img class="senia" src="lasenia.png" alt="">
     </div>
     <h1>INCIDÈNCIA</h1>
-
-    <form onsubmit="return onSubmit(this)">
+    <!-- <form onsubmit="return onSubmit(this)"> -->
+    <form method="POST" action="http://localhost:3000/convivencia/">
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
             <div class="col-sm-7">
@@ -62,8 +62,10 @@
         </div>
 
         <div class="botones">
-            <input type="button" value="LLEU" onclick="visibilidadLeve()">
-            <input type="button" value="GREU" onclick="visibilidadGrave()">
+            <select name="tipoConvivencia" id="tipoConvivencia">
+                <option value="leve" onclick="visibilidadLeve()">Leve</option>
+                <option value="grave" onclick="visibilidadGrave()">Grave</option>
+            </select>
         </div>
         <hr>
         <!--Formulario para parte leve-->

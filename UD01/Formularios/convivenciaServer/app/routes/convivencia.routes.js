@@ -8,11 +8,11 @@ module.exports = (app) => {
     app.get('/convivencia', convivencia.findAll);
 
     // Retrieve a single convivencia with investigadorId
-    app.get('/convivencia/:investigadorId', convivencia.findOne);
+    app.get('/convivencia/:convivenciaId', convivencia.findOne);
 
     // Update a convivencia with investigadorId
-    app.put('/convivencia/:investigadorId', convivencia.update);
+    app.put('/convivencia/:convivenciaId', convivencia.update);
 
     // Delete a convivencia with investigadorId
-    app.delete('/convivencia/:investigadorId', convivencia.delete);
+    app.delete('/convivencia/:convivenciaId', convivencia.delete);
 }

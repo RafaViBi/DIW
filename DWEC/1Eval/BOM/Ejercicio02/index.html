@@ -16,11 +16,14 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div id="general">
-        <video src="Videos/KDA - POPSTARS (ft Madison Beer (G)I-DLE Jaira Burns)  Official Music Video - League of Legends.mp4"
+        <video src="Videos/KDA - POPSTARS (ft Madison Beer (G)I-DLE Jaira Burns)  Official Music Video - League of Legends.mp4" id="video1"
             type="video/mp4">
         </video>
         <div class="controles">
@@ -31,6 +34,16 @@
             <img id="reiniciar" src="reiniciar.png">
             <img id="bajarVolumen" src="bajarVolumen.png">
             <img id="subirVolumen" src="subirVolumen.png">
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                style="width:40%">
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                style="width:40%">
+            </div>
         </div>
     </div>
 </body>

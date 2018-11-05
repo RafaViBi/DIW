@@ -8,7 +8,8 @@ function cargar() {
     document.getElementById("reiniciar").addEventListener("click", reiniciarVideo);
     document.getElementById("atrasarVideo").addEventListener("click", atrasarVideo);
     document.getElementById("adelantarVideo").addEventListener("click", adelantarVideo);
-    
+    document.getElementById("video1").addEventListener("timeupdate", barraVideo, false);
+
 }
 
 function obtenerVideo(element) {
@@ -24,7 +25,7 @@ function iniciarVideo() {
 
     var video = obtenerVideo(this);
 
-    if(video.paused){
+    if (video.paused) {
         video.play();
         this.src = "pausaVideo.png";
     } else {
@@ -37,16 +38,16 @@ function silencio() {
 
     var video = obtenerVideo(this);
 
-    if(video.volume != 0) {
+    if (video.volume != 0) {
         video.volume = 0;
-    } 
+    }
 }
 
 function subirVolumen() {
     var video = obtenerVideo(this);
     var actualVolumen = video.volume;
 
-    if(video.volume >= 0 && video.volume < 0.9){
+    if (video.volume >= 0 && video.volume < 0.9) {
         video.volume = actualVolumen + 0.1;
     }
 
@@ -56,9 +57,9 @@ function bajarVolumen() {
     var video = obtenerVideo(this);
     var actualVolumen = video.volume;
 
-    if(video.volume <= 1 && video.volume > 0.1){
+    if (video.volume <= 1 && video.volume > 0.1) {
         video.volume = actualVolumen - 0.1;
-    } 
+    }
 }
 
 function reiniciarVideo() {
@@ -87,5 +88,14 @@ function adelantarVideo() {
     var videoActual = video.currentTime;
 
     video.currentTime = videoActual + 5.0;
+
+}
+
+function barraVideo() {
+
+    var momentoVideo = this.currentTime;
+    var total = this.duration;
+
+    document.getElementById("barraVideo").style.width = (100 * momentoVideo) / total;
 
 }

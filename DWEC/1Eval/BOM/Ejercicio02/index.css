@@ -2,12 +2,17 @@ video {
     padding-left: 20%;
 }
 
-.controles{
-   margin-left: 31.5%;
+.controles {
+    margin-left: 31.5%;
 }
 
 img {
     padding: 10px;
+}
+
+.progress {
+    margin-left: 24.5%;
+    width: 50%;
 }
 
 #general {

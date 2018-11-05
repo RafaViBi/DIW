@@ -1,9 +1,13 @@
-.video {
+video {
     padding-left: 20%;
 }
 
 .controles{
-   margin-left: 29.5%;
+   margin-left: 31.5%;
+}
+
+img {
+    padding: 10px;
 }
 
 #general {

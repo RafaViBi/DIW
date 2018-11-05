@@ -1,4 +1,4 @@
-const convivencia = require('../models/convivencia.model.js');
+const Convivencia = require('../models/convivencia.model.js');
 
 // Crear y salvar
 exports.create = (req, res) => {
@@ -12,7 +12,7 @@ exports.create = (req, res) => {
     }
 
     if (req.body.tipoConvivencia = "leve") {
-        const convivencia = new convivencia({
+        const convivencia = new Convivencia({
             nombreAlumno: req.body.nombreAlumno || "No nombre",
             grupoAlumno: req.body.grupoAlumno || "Sin grupo",
             nombreProfesor: req.body.nombreProfesor || "No nombre Profesor",
@@ -39,9 +39,6 @@ exports.create = (req, res) => {
             telefonoPadres: req.body.telefonoPadres || "No nombre",
             emailPadres: req.body.emailPadres || "No nombre",
             fechaHoy: req.body.fechaHoy || "No nombre",
-            telefonoPadres: req.body.telefonoPadres || "No nombre",
-            emailPadres: req.body.emailPadres || "No nombre",
-            fechaHoy: req.body.fechaHoy || "No nombre",
         })
 
         convivencia.save().then(data => {
@@ -53,7 +50,7 @@ exports.create = (req, res) => {
         });
 
     } else {
-        const convivencia = new convivencia({
+        const convivencia = new Convivencia({
             nombreAlumno: req.body.nombreAlumno || "No nombre",
             grupoAlumno: req.body.grupoAlumno || "No nombre",
             nombreProfesor: req.body.nombreProfesor || "No nombre" ,
@@ -62,9 +59,6 @@ exports.create = (req, res) => {
             horaIncidente: req.body.horaIncidente || "No nombre",
             lugarIncidente: req.body.lugarIncidente || "No nombre",
             tipificacion: req.body.tipificacion || "No nombre",
-            telefonoPadres: req.body.telefonoPadres || "No nombre",
-            emailPadres: req.body.emailPadres || "No nombre",
-            fechaHoy: req.body.fechaHoy || "No nombre",
             telefonoPadres: req.body.telefonoPadres || "No nombre",
             emailPadres: req.body.emailPadres || "No nombre",
             fechaHoy: req.body.fechaHoy || "No nombre",

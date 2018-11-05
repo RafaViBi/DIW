@@ -40,3 +40,6 @@ app.get('/',(req,res)=>{
 app.listen(3000,() => {
     console.log(" * Server EUW UP and Running");
 });
+
+// Require minions routes
+require('./app/routes/convivencia.routes.js')(app); 

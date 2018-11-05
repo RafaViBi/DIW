@@ -55,5 +55,5 @@ const convivenciaGraveSchema = mongoose.Schema({
         timestamps: true
     });
 
-module.exports = mongoose.model('convivenciaLeve', convivenciaLeveSchema);
 module.exports = mongoose.model('convivenciaGrave', convivenciaGraveSchema);
+module.exports = mongoose.model('convivenciaLeve', convivenciaLeveSchema);

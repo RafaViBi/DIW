@@ -8,7 +8,7 @@ function cargar() {
     document.getElementById("reiniciar").addEventListener("click", reiniciarVideo);
     document.getElementById("atrasarVideo").addEventListener("click", atrasarVideo);
     document.getElementById("adelantarVideo").addEventListener("click", adelantarVideo);
-    document.getElementById("video1").addEventListener("timeupdate", barraVideo, false);
+    document.getElementById("video0").addEventListener("timeupdate", barraVideo, false);
 
 }
 
@@ -35,20 +35,27 @@ function iniciarVideo() {
 }
 
 function silencio() {
-
     var video = obtenerVideo(this);
+    var barra = document.getElementById("barraVolumen");
 
     if (video.volume != 0) {
         video.volume = 0;
+        barra.value = 0;
     }
 }
 
 function subirVolumen() {
     var video = obtenerVideo(this);
     var actualVolumen = video.volume;
+    var barra = document.getElementById("barraAudio");
 
     if (video.volume >= 0 && video.volume < 0.9) {
         video.volume = actualVolumen + 0.1;
+        barra.value = (actualVolumen + 0.1) * 100;
+    } else {
+        if (video.volume == 0.9) {
+            barra.value = 100;
+        }
     }
 
 }
@@ -56,9 +63,11 @@ function subirVolumen() {
 function bajarVolumen() {
     var video = obtenerVideo(this);
     var actualVolumen = video.volume;
+    var barra = document.getElementById("barraAudio");
 
     if (video.volume <= 1 && video.volume > 0.1) {
         video.volume = actualVolumen - 0.1;
+        barra.value = (actualVolumen - 0.1) * 100;
     }
 }
 
@@ -92,10 +101,9 @@ function adelantarVideo() {
 }
 
 function barraVideo() {
-
     var momentoVideo = this.currentTime;
     var total = this.duration;
+    var barra = document.getElementById("barraVideo");
 
-    document.getElementById("barraVideo").style.width = (100 * momentoVideo) / total;
-
+    barra.value = (100 * momentoVideo) / total;
 }

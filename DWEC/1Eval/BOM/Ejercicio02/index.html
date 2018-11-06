@@ -22,28 +22,32 @@
 </head>
 
 <body>
-    <div id="general">
-        <video src="Videos/KDA - POPSTARS (ft Madison Beer (G)I-DLE Jaira Burns)  Official Music Video - League of Legends.mp4" id="video1"
-            type="video/mp4">
-        </video>
-        <div class="controles">
-            <img id="volumenOff" src="volumenOff.png">
-            <img id="atrasarVideo" src="atrasarVideo.png">
-            <img id="playPause" src="playVideo.png">
-            <img id="adelantarVideo" src="adelantarVideo.png">
-            <img id="reiniciar" src="reiniciar.png">
-            <img id="bajarVolumen" src="bajarVolumen.png">
-            <img id="subirVolumen" src="subirVolumen.png">
-        </div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                style="width:40%">
+    <div class="total">
+        <div id="general">
+            <video class="videoPrincipal" src="Videos/Video0.mp4" id="video0" type="video/mp4">
+            </video>
+            <div class="controles">
+                <img id="volumenOff" src="volumenOff.png">
+                <img id="atrasarVideo" src="atrasarVideo.png">
+                <img id="playPause" src="playVideo.png">
+                <img id="adelantarVideo" src="adelantarVideo.png">
+                <img id="reiniciar" src="reiniciar.png">
+                <img id="bajarVolumen" src="bajarVolumen.png">
+                <img id="subirVolumen" src="subirVolumen.png">
+            </div>
+            <div class="progress">
+                <progress id="barraVideo" min="0" max="100" value="0"></progress>
+            </div>
+            <div class="progress">
+                <progress id="barraAudio" min="0" max="100" value="100"></progress>
             </div>
         </div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                id="barraVideo" aria-valuenow="30">
-            </div>
+        <div class="selectorVideos">
+            <p class="titulo">Top Videos:</p>
+            <p>Video 1</p>
+            <video class="videoSecundario" src="Videos/Video1.mp4" id="video1" type="video/mp4"></video>
+            <p>Video 2</p>
+            <video class="videoSecundario" src="Videos/Video1.mp4" id="video1" type="video/mp4"></video>
         </div>
     </div>
 </body>

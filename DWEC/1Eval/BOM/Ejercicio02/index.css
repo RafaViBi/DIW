@@ -1,5 +1,13 @@
-video {
+.total {
+    margin: 1%;
+}
+
+.videoPrincipal {
     padding-left: 20%;
+}
+
+.videoSecundario {
+    width: 70%;
 }
 
 .controles {
@@ -15,7 +23,22 @@ img {
     width: 50%;
 }
 
+progress {
+    width: 100%;
+}
+
 #general {
-    margin: 1%;
-    width: calc(99% - 30%);
+    width: 70%;
+    position: relative;
+    float: left;
+}
+
+.selectorVideos {
+    position: relative;
+    width: 30%;
+    float: left;
+}
+
+.titulo {
+    font-size: 36px;
 }

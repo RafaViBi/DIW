@@ -18,10 +18,10 @@ const convivenciaLeveSchema = mongoose.Schema({
     horaTareaFin: String,
     opcionE: Boolean,
     opcionF: Boolean,
-    fechaSuspActInicio: Date,
-    fechaSuspActFin: Date,
-    fechaSuspAsisInicioF: Date,
-    fechaSuspAsisFinF: Date,
+    fechaSuspActInicio: String,
+    fechaSuspActFin: String,
+    fechaSuspAsisInicioF: String,
+    fechaSuspAsisFinF: String,
     descripcionIncidente: String,
     tipificacion: Array,
     telefonoPadres: String,
@@ -55,5 +55,5 @@ const convivenciaGraveSchema = mongoose.Schema({
         timestamps: true
     });
 
-module.exports = mongoose.model('convivenciaGrave', convivenciaGraveSchema);
 module.exports = mongoose.model('convivenciaLeve', convivenciaLeveSchema);
+module.exports = mongoose.model('convivenciaGrave', convivenciaGraveSchema);

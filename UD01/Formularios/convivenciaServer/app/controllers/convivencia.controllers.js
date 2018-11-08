@@ -1,5 +1,5 @@
 const convivenciaLeve = require('../models/convivenciaLeve.model.js');
-const convivenciaGrave = require('../models/convivenciaLeve.model.js');
+const convivenciaGrave = require('../models/convivenciaGrave.model.js');
 
 // Crear y salvar
 exports.create = (req, res) => {

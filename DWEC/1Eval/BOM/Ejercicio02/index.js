@@ -8,7 +8,9 @@ function cargar() {
     document.getElementById("reiniciar").addEventListener("click", reiniciarVideo);
     document.getElementById("atrasarVideo").addEventListener("click", atrasarVideo);
     document.getElementById("adelantarVideo").addEventListener("click", adelantarVideo);
-    document.getElementById("video0").addEventListener("timeupdate", barraVideo, false);
+    document.getElementById("vidPrincipal").addEventListener("timeupdate", barraVideo, false);
+
+    document.getElementById("Video1").addEventListener("click", cambiarVideo);
 
 }
 
@@ -106,4 +108,16 @@ function barraVideo() {
     var barra = document.getElementById("barraVideo");
 
     barra.value = (100 * momentoVideo) / total;
+}
+
+function cambiarVideo() {
+
+    var id = this.id;
+    var video = document.getElementById("vidPrincipal");
+
+    video.pause();
+    video.src = "Videos/" + id + ".mp4";
+    video.load();
+    document.getElementById("playPause").src = "playVideo.png";
+    document.getElementById("barraVideo").value = 0;
 }

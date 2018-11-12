@@ -38,7 +38,7 @@ function iniciarVideo() {
 
 function silencio() {
     var video = obtenerVideo(this);
-    var barra = document.getElementById("barraVolumen");
+    var barra = document.getElementById("barraAudio");
 
     if (video.volume != 0) {
         video.volume = 0;

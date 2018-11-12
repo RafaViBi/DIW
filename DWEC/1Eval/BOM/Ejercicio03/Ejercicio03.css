@@ -1,0 +1,36 @@
+body { 
+    background:#58ACFA;
+}
+
+h1 {
+    text-align:center;
+}
+
+#tablero{
+    width:310px;
+    height:310px; 
+    padding:0px; 
+    border: 7px solid #000; 
+    background-color:white; 
+    margin: 20px auto;
+}
+#tablero div{
+    width:100px;
+    height:100px;
+    float:left; 
+    margin:0px; 
+    font-size: 90px; 
+    text-align:center;
+}
+
+#celda1,#celda2,#celda3,#celda4,#celda5,#celda6 {
+    border-bottom: 5px solid black;
+}
+
+#celda1,#celda2,#celda4,#celda5,#celda7,#celda8 {
+    border-right: 5px solid black;
+}
+
+#tablero > div:hover {
+    background-color:#ddd;
+}

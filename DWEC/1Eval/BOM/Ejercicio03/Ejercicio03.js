@@ -22,11 +22,22 @@ function jugar() {
             jugador++;
             var cadena = this.id;
             var n = cadena.substr(-1);
-            celdas.splice(n - 1, 1);
+            eliminarArray(n);
             comprobarVictoriaJugador(this);
             jugarCPU();
         }
     }
+}
+
+function eliminarArray(n) {
+    
+    console.log("-----------");
+    if (n > celdas.length) {
+        celdas.splice(celdas.length - 1, 1);
+    } else {
+        celdas.splice(n - 1, 1);
+    }
+
 }
 
 function comprobarVictoriaCPU() {

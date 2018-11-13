@@ -141,8 +141,10 @@ function jugarCPU() {
     if (document.getElementById("celda" + eleccionCPU).innerHTML == "") {
         document.getElementById("celda" + eleccionCPU).innerHTML = "O";
         jugador--;
-        var index = celdas.indexOf(eleccionCPU);
-        celdas.splice(index, 1);
+        celdas.splice(eleccionCPU - 1, 1);
+        for (let index = 0; index < celdas.length; index++) {
+            console.log(celdas[index]);
+        }
         comprobarVictoriaCPU(this);
     } else {
         jugarCPU();

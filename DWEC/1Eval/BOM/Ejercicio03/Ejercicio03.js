@@ -134,7 +134,7 @@ function comprobarVictoriaJugador() {
 
 function jugarCPU() {
 
-    var eleccionCPU = Math.floor(Math.random() * (celdas.length - 1) + 1);
+    var eleccionCPU = Math.floor(Math.random() * (celdas.length - 0) + 0);
 
     if (document.getElementById("celda" + eleccionCPU).innerHTML == "") {
         document.getElementById("celda" + eleccionCPU).innerHTML = "O";

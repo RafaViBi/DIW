@@ -1,7 +1,7 @@
 window.addEventListener("load", cargar, false);
 
 var jugador = 1;
-var celdas = ["1","2","3","4","5","6","7","8","9"];
+var celdas = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 function cargar() {
     document.getElementById("celda1").addEventListener("click", jugar);
@@ -20,6 +20,9 @@ function jugar() {
         if (this.innerHTML == "") {
             this.innerHTML = "X";
             jugador++;
+            var cadena = this.id;
+            var n = cadena.substr(-1);
+            celdas.splice(n - 1, 1);
             comprobarVictoriaJugador(this);
             jugarCPU();
         }
@@ -119,15 +122,16 @@ function comprobarVictoriaJugador() {
 }
 
 function jugarCPU() {
-    
+
     var eleccionCPU = Math.floor(Math.random() * (celdas.length - 1) + 1);
-    
-    console.log(eleccionCPU);
 
     if (document.getElementById("celda" + eleccionCPU).innerHTML == "") {
         document.getElementById("celda" + eleccionCPU).innerHTML = "O";
         jugador--;
-        celdas.splice(1,eleccionCPU);
+        celdas.splice(eleccionCPU - 1, 1);
+        for (let index = 0; index < celdas.length; index++) {
+            console.log(celdas[index]);
+        }
         comprobarVictoriaCPU(this);
     } else {
         jugarCPU();

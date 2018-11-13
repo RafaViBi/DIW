@@ -32,10 +32,12 @@ function jugar() {
 function eliminarArray(n) {
     
     console.log("-----------");
-    if (n > celdas.length) {
-        celdas.splice(celdas.length - 1, 1);
-    } else {
-        celdas.splice(n - 1, 1);
+
+    for (let i = 0; i < celdas.length; i++) {
+        if (n == celdas[i]) {
+            var index = celdas.indexOf(n);
+            celdas.splice(index, 1);
+        }
     }
 
 }
@@ -134,15 +136,13 @@ function comprobarVictoriaJugador() {
 
 function jugarCPU() {
 
-    var eleccionCPU = Math.floor(Math.random() * (celdas.length - 0) + 0);
+    var eleccionCPU = Math.floor(Math.random() * (celdas.length - 1) + 1);
 
     if (document.getElementById("celda" + eleccionCPU).innerHTML == "") {
         document.getElementById("celda" + eleccionCPU).innerHTML = "O";
         jugador--;
-        celdas.splice(eleccionCPU - 1, 1);
-        for (let index = 0; index < celdas.length; index++) {
-            console.log(celdas[index]);
-        }
+        var index = celdas.indexOf(eleccionCPU);
+        celdas.splice(index, 1);
         comprobarVictoriaCPU(this);
     } else {
         jugarCPU();

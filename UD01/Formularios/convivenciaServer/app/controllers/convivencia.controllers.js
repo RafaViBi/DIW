@@ -13,6 +13,7 @@ exports.create = (req, res) => {
     }
 
     if (req.body.tipoConvivencia = "leve") {
+        console.log(req.body.tipoConvivencia);
         const convivencia = new convivenciaLeve({
             nombreAlumno: req.body.nombreAlumno || "No nombre",
             grupoAlumno: req.body.grupoAlumno || "Sin grupo",

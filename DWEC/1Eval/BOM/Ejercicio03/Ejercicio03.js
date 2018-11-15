@@ -139,7 +139,7 @@ function jugarCPU() {
         console.log("----" + eleccionCPU + "----");
         document.getElementById("celda" + eleccionCPU).innerHTML = "O";
         jugador--;
-        eliminarArray(eleccionCPU);
+        celdas.splice(eleccionCPU, 1);
         for (let index = 0; index < celdas.length; index++) {
             console.log(celdas[index]);
         }

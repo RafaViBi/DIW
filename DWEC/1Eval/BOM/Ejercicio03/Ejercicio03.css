@@ -25,11 +25,11 @@ h1 {
     text-align:center;
 }
 
-#celda1,#celda2,#celda3,#celda4,#celda5,#celda6 {
+#celda0,#celda1,#celda2,#celda3,#celda4,#celda5 {
     border-bottom: 5px solid black;
 }
 
-#celda1,#celda2,#celda4,#celda5,#celda7,#celda8 {
+#celda0,#celda1,#celda3,#celda4,#celda6,#celda7 {
     border-right: 5px solid black;
 }
 

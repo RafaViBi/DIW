@@ -30,13 +30,14 @@ function jugar() {
 }
 
 function eliminarArray(n) {
-    
-    console.log("-----------");
 
     for (let i = 0; i < celdas.length; i++) {
         if (n == celdas[i]) {
             var index = celdas.indexOf(n);
             celdas.splice(index, 1);
+            for (let index = 0; index < celdas.length; index++) {
+                console.log(celdas[index]);
+            }
         }
     }
 
@@ -72,7 +73,7 @@ function comprobarVictoriaCPU() {
     }
 
     //VERTICAL
-    if (document.getElementById("celda2").innerHTML == "O" && document.getElementById("celda4").innerHTML == "O" && document.getElementById("celda1").innerHTML == "O") {
+    if (document.getElementById("celda1").innerHTML == "O" && document.getElementById("celda4").innerHTML == "O" && document.getElementById("celda1").innerHTML == "O") {
         alert("Victoria CPU");
         location.reload();
     }
@@ -118,7 +119,7 @@ function comprobarVictoriaJugador() {
     }
 
     //VERTICAL
-    if (document.getElementById("celda2").innerHTML == "X" && document.getElementById("celda4").innerHTML == "X" && document.getElementById("celda1").innerHTML == "X") {
+    if (document.getElementById("celda1").innerHTML == "X" && document.getElementById("celda4").innerHTML == "X" && document.getElementById("celda1").innerHTML == "X") {
         alert("Victoria Jugador");
         location.reload();
     }
@@ -138,15 +139,32 @@ function jugarCPU() {
 
     var eleccionCPU = Math.floor(Math.random() * (celdas.length - 1) + 1);
 
+    /* for (let i = 0; i < celdas.length; i++) {
+        console.log("eleccion CPU:" + eleccionCPU + " - celdas[i]:" + celdas[i]);
+        if (eleccionCPU == celdas[i]) {
+            document.getElementById("celda" + eleccionCPU).innerHTML = "O";
+            jugador--;
+            eliminarArray(eleccionCPU);
+            for (let index = 0; index < celdas.length; index++) {
+                console.log(celdas[index]);
+            }
+            comprobarVictoriaJugador(this);
+        } else {
+            jugarCPU();
+        }
+    } */
+
     if (document.getElementById("celda" + eleccionCPU).innerHTML == "") {
+        console.log("----" + eleccionCPU + "----");
         document.getElementById("celda" + eleccionCPU).innerHTML = "O";
         jugador--;
-        celdas.splice(eleccionCPU - 1, 1);
-        for (let index = 0; index < celdas.length; index++) {
+        celdas.splice(eleccionCPU -1 , 1);
+        //eliminarArray(eleccionCPU);
+        /* for (let index = 0; index < celdas.length; index++) {
             console.log(celdas[index]);
-        }
-        comprobarVictoriaCPU(this);
+        } */
+        comprobarVictoriaCPU(this); 
     } else {
         jugarCPU();
-    }
+    } 
 }

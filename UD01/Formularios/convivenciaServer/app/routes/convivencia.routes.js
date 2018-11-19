@@ -5,7 +5,10 @@ module.exports = (app) => {
     app.post('/convivencia', convivencia.create);
 
     // Retrieve all convivencia
-    app.get('/convivencia', convivencia.findAll);
+    app.get('/convivenciaGrave', convivencia.findAllGraves);
+
+    // Retrieve all convivencia
+    app.get('/convivenciaLeve', convivencia.findAllLeves);
 
     // Retrieve a single convivencia with investigadorId
     app.get('/convivencia/:convivenciaId', convivencia.findOne);

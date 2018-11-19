@@ -12,8 +12,7 @@ exports.create = (req, res) => {
         });
     }
 
-    if (req.body.tipoConvivencia = "leve") {
-        console.log(req.body.tipoConvivencia);
+    if (req.body.tipoConvivencia == "leve") {
         const convivencia = new convivenciaLeve({
             nombreAlumno: req.body.nombreAlumno || "No nombre",
             grupoAlumno: req.body.grupoAlumno || "Sin grupo",
@@ -51,7 +50,9 @@ exports.create = (req, res) => {
             });
         });
 
-    } else {
+    }
+
+    if (req.body.tipoConvivencia == "grave") {
         const convivencia = new convivenciaGrave({
             nombreAlumno: req.body.nombreAlumno || "No nombre",
             grupoAlumno: req.body.grupoAlumno || "No nombre",
@@ -78,7 +79,7 @@ exports.create = (req, res) => {
 };
 
 
-// Obtener todas los convivencias
+/* // Obtener todas los convivencias
 exports.findAll = (req, res) => {
 
     convivenciaLeve.find().then(convivencias => {
@@ -97,8 +98,33 @@ exports.findAll = (req, res) => {
         });
     });
 
+}; */
+
+// Obtener todas las Faltas Leves
+exports.findAllLeves = (req, res) => {
+
+    convivenciaLeve.find().then(convivencia => {
+        res.send(convivencia);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || " Algo fue mal mientras los capturabamos a todos"
+        });
+    });
+
 };
 
+// Obtener todas las Faltas Graves
+exports.findAllGraves = (req,res) => {
+
+    convivenciaGrave.find().then(convivencia => {
+        res.send(convivencia);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || " Algo fue mal mientras los capturabamos a todos"
+        });
+    });
+
+};
 
 // Obtener un convivencia por Id
 exports.findOne = (req, res) => {
@@ -274,7 +300,7 @@ exports.delete = (req, res) => {
 };
 
 function comprobarBoolean(elemento) {
-    
+
     if (elemento == "on") {
         return true;
     } else {

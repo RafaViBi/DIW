@@ -1,0 +1,13 @@
+#rojo {
+    float: left;
+    background-color: #FF0000;
+    width: 30px;
+    height: 100px;
+}
+
+#azul {
+    float: right;
+    background-color: #0040FF;
+    width: 30px;
+    height: 100px;
+}

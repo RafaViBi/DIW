@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const path = require('path');
 const app = express();
 
 // Utilizaremos body-parser para "parsear lo que nos pidan"
@@ -43,3 +43,6 @@ app.listen(3000,() => {
 
 // Require minions routes
 require('./app/routes/convivencia.routes.js')(app); 
+
+//Paginas publicas (estaticas)
+app.use(express.static(path.join(__dirname,'public')));

@@ -78,28 +78,6 @@ exports.create = (req, res) => {
     }
 };
 
-
-/* // Obtener todas los convivencias
-exports.findAll = (req, res) => {
-
-    convivenciaLeve.find().then(convivencias => {
-        res.send(convivencias);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || " Algo fue mal mientras los capturabamos a todos"
-        });
-    });
-
-    convivenciaGrave.find().then(convivencias => {
-        res.send(convivencias);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || " Algo fue mal mientras los capturabamos a todos"
-        });
-    });
-
-}; */
-
 // Obtener todas las Faltas Leves
 exports.findAllLeves = (req, res) => {
 
@@ -166,9 +144,6 @@ exports.findOne = (req, res) => {
             });
         });
 };
-
-
-
 
 // Actualizar un convivencia
 exports.update = (req, res) => {

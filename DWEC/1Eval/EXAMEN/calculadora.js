@@ -5,6 +5,7 @@ window.onload = function () {
 }
 
 var contadorComa = 0;
+var contadorPorciento = 0;
 
 function cargar() {
     // 0

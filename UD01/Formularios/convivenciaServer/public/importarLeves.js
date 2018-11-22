@@ -1,7 +1,19 @@
+function deleteFalta(auxId){
+  console.log(auxId);
+  $.ajax({
+    type: "DELETE",
+    url: "http://localhost:3000/convivencia/"+auxId,
+    data: "",
+    success: function(msg){
+        location.reload();
+    }
+  });
+}
+
 $.getJSON("http://localhost:3000/convivenciaLeve", function (data) {
   var items = [];
   $.each(data, function (key, val) {
-    items.push("<tr><td id='" + val._id + "'> " + val.nombreAlumno + "<input class='eliminar' type='button' value='Eliminar' onclick='borrar()'>" + "</td></tr>");
+    items.push("<tr><td> " + val.nombreAlumno + "<input class='eliminar' type='submit' value='Eliminar' onclick='deleteFalta(\"" + val._id + "\")'></td></tr>");
   });
 
   $("<table/>", {
@@ -9,10 +21,3 @@ $.getJSON("http://localhost:3000/convivenciaLeve", function (data) {
     html: items.join("")
   }).appendTo("#divListaLeves");
 });
-
-function borrar() {
-  $.ajax ({
-    type:'DELETE',
-    url: '/convivencia/:' + this.id,
-  })
-}

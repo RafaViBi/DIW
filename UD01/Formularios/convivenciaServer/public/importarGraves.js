@@ -1,12 +1,23 @@
+function deleteFalta(auxId){
+  console.log(auxId);
+  $.ajax({
+    type: "DELETE",
+    url: "http://localhost:3000/convivencia/"+auxId,
+    data: "",
+    success: function(msg){
+        location.reload();
+    }
+  });
+}
+
 $.getJSON("http://localhost:3000/convivenciaGrave", function (data) {
   var items = [];
   $.each(data, function (key, val) {
-    console.log(key);
-    items.push("<li id='" + key + "' class='list-group-item'>" + val.nombreAlumno + "</li>");
+    items.push("<tr><td> " + val.nombreAlumno + "<input class='eliminar' type='submit' value='Eliminar' onclick='deleteFalta(\"" + val._id + "\")'></td></tr>");
   });
 
-  $("<ul/>", {
-    "class": "list-group",
+  $("<table/>", {
+    "class": "table table-striped table-dark",
     html: items.join("")
   }).appendTo("#divListaGraves");
 });

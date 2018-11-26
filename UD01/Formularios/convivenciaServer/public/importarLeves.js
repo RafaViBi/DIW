@@ -1,13 +1,12 @@
 function deleteFalta(auxId){
-  console.log(auxId);
   $.ajax({
     type: "DELETE",
     url: "http://localhost:3000/convivencia/"+auxId,
     data: "",
-    success: function(msg){
-        location.reload();
-    }
   });
+  setInterval(function() {
+    window.location.reload();
+  }, 50); 
 }
 
 $.getJSON("http://localhost:3000/convivenciaLeve", function (data) {

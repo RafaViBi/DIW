@@ -14,3 +14,7 @@ function visibilidadGrave() {
   document.getElementById("grave").style.visibility="visible";
   document.getElementById("leve").style.visibility="hidden";
 }
+
+function returnMenu() {
+  location.href='http://localhost:3000/menu.html';
+}

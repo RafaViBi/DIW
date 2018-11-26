@@ -24,7 +24,6 @@
         <img class="senia" src="lasenia.png" alt="">
     </div>
     <h1>INCIDÈNCIA</h1>
-    <!-- <form onsubmit="return onSubmit(this)"> -->
     <form method="POST" action="http://localhost:3000/convivencia/">
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
@@ -212,7 +211,7 @@
                     </div>
                 </div>
             </div>
-            <input type="submit">
+            <input type="submit" onclick="returnMenu()">
         </div>
         <!--Fin formulario para parte leve-->
         <!--Formulario para parte grave-->
@@ -282,7 +281,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit">
+                <input type="submit" onclick="returnMenu()">
             </div>
             <!--Fin formulario para parte grave-->
     </form>

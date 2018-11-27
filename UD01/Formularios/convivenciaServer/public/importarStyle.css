@@ -1,0 +1,14 @@
+.eliminar{
+    float: right;
+}
+
+.return {
+    position: relative;
+    left: 10px;
+    top: -50px;
+    color: black;
+}
+
+.return:hover {
+    text-decoration: none;
+}

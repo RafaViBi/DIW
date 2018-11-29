@@ -24,7 +24,7 @@
         <img class="senia" src="lasenia.png" alt="">
     </div>
     <h1>INCIDÈNCIA</h1>
-    <form method="POST" action="http://localhost:3000/convivencia/" target="_blank">
+    <form method="POST" action="http://localhost:3000/convivencia/">
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
             <div class="col-sm-7">
@@ -195,23 +195,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    Signatura del professor/a
-                    <div class="custom-file">
-                        <input type="file" name="fiarmaProfesor" class="custom-file-input" id="customFileLang" lang="es">
-                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                    </div>
-                </div>
-                <div class="col">
-                    Signatura del cap d'estudis/director
-                    <div class="custom-file">
-                        <input type="file" name="firmaDirector" class="custom-file-input" id="customFileLang" lang="es">
-                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                    </div>
-                </div>
-            </div>
-            <input type="submit">
+            <input type="submit" id="convivenciaLeve">
         </div>
         <!--Fin formulario para parte leve-->
         <!--Formulario para parte grave-->
@@ -265,26 +249,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        Signatura del professor/a
-                        <div class="custom-file">
-                            <input type="file" name="fiarmaProfesor" class="custom-file-input" id="customFileLang" lang="es">
-                            <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        Signatura del cap d'estudis/director
-                        <div class="custom-file">
-                            <input type="file" name="firmaDirector" class="custom-file-input" id="customFileLang" lang="es">
-                            <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit">
+                <input type="submit" id="convivenciaGrave">
             </div>
             <!--Fin formulario para parte grave-->
     </form>
 </body>
-
 </html>

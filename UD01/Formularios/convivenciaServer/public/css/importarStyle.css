@@ -1,5 +1,9 @@
-.eliminar{
+.modificar, .eliminar{
     float: right;
+    width: 100px;
+    height: 45px;
+    text-align: center;
+    margin-right: 0.5%;
 }
 
 .return {

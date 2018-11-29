@@ -9,10 +9,14 @@ function deleteFalta(auxId){
   }, 50); 
 }
 
+function modificarIncidencia() {
+  window.location.href='../modificarGraves.html';
+}
+
 $.getJSON("http://localhost:3000/convivenciaGrave", function (data) {
   var items = [];
   $.each(data, function (key, val) {
-    items.push("<tr><td> " + val.nombreAlumno + "<input class='eliminar' type='submit' value='Eliminar' onclick='deleteFalta(\"" + val._id + "\")'></td></tr>");
+    items.push("<tr><td> " + val.nombreAlumno + "<input type='submit' class='modificar' value='Modificar' onclick='modificarIncidencia()' ><input class='eliminar' type='submit' value='Eliminar' onclick='deleteFalta(\"" + val._id + "\")'></td></tr>");
   });
 
   $("<table/>", {

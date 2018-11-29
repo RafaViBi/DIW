@@ -76,6 +76,7 @@ exports.create = (req, res) => {
         });
 
     }
+    //res.redirect("/menu.html");
 };
 
 // Obtener todas las Faltas Leves

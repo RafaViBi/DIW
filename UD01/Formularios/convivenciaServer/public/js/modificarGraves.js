@@ -7,7 +7,7 @@ $.getJSON(ruta, function (data) {
   $.each(data, function (key, val) {
     if (camposMostrar.includes(key)) {
       items.push("<label>" + key + "</label><br>");
-      items.push("<input value='" + val + "'></input> <input type='submit' onclick='renovarCampo()'> <br>");
+      items.push("<input value='" + val + "'></input> <input type='submit' value='Modificar campo' onclick='renovarCampo()'> <br>");
     }
   });
 
@@ -16,7 +16,7 @@ $.getJSON(ruta, function (data) {
   }).appendTo("#modificarFalta");
 });
 
-/* function renovarCampo(auxId) {
+function renovarCampo(auxId) {
   $.ajax({
     type: "PUT",
     url: "http://localhost:3000/convivencia/" + auxId,
@@ -25,4 +25,4 @@ $.getJSON(ruta, function (data) {
   setInterval(function () {
     window.location.reload();
   }, 50);
-} */
+}

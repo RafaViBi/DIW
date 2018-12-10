@@ -37,6 +37,7 @@ exports.create = (req, res) => {
             fechaSuspAsisFinF: req.body.fechaSuspAsisFinF || "0000/00/00",
             descripcionIncidente: req.body.descripcionIncidente || "No nombre",
             tipificacion: req.body.tipificacion || "No nombre",
+            
             telefonoPadres: req.body.telefonoPadres || "No nombre",
             emailPadres: req.body.emailPadres || "No nombre",
             fechaHoy: req.body.fechaHoy || "0000/00/00",

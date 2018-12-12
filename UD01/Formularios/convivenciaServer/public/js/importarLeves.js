@@ -9,10 +9,14 @@ function deleteFalta(auxId){
   }, 50); 
 }
 
+function modificarIncidencia(auxId) {
+  window.location.href='../modificarLeves.html?' + auxId;
+}
+
 $.getJSON("http://localhost:3000/convivenciaLeve", function (data) {
   var items = [];
   $.each(data, function (key, val) {
-    items.push("<tr><td> " + val.nombreAlumno + "<input class='eliminar' type='submit' value='Eliminar' onclick='deleteFalta(\"" + val._id + "\")'></td></tr>");
+    items.push("<tr><td> " + val.nombreAlumno + " / " + val.nombreProfesor + " / " + val.fechaIncidente +  "<input type='submit' class='modificar' value='Modificar' onclick='modificarIncidencia(\"" + val._id + "\")' ><input class='eliminar' type='submit' value='Eliminar' onclick='deleteFalta(\"" + val._id + "\")'></td></tr>");
   });
 
   $("<table/>", {

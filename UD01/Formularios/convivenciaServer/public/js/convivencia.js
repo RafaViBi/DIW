@@ -1,4 +1,4 @@
-function visibilidadLeve() {
+function visibilidadLeve() {  
   document.getElementById("leve").style.visibility = "visible";
   document.getElementById("grave").style.visibility = "hidden";
 }

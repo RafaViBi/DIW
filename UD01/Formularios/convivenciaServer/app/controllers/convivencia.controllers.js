@@ -37,10 +37,9 @@ exports.create = (req, res) => {
             fechaSuspAsisFinF: req.body.fechaSuspAsisFinF || "0000/00/00",
             descripcionIncidente: req.body.descripcionIncidente || "No nombre",
             tipificacion: req.body.tipificacion || "No nombre",
-            
-            telefonoPadres: req.body.telefonoPadres || "No nombre",
-            emailPadres: req.body.emailPadres || "No nombre",
-            fechaHoy: req.body.fechaHoy || "0000/00/00",
+            telefonoPadres: req.body.telefonoPadresL || "No nombre",
+            emailPadres: req.body.emailPadresL || "No nombre",
+            fechaHoy: req.body.fechaHoyL || "0000/00/00"
         })
 
         convivencia.save().then(data => {
@@ -64,9 +63,9 @@ exports.create = (req, res) => {
             lugarIncidente: req.body.lugarIncidente || "No nombre",
             tipificacion: req.body.tipificacion || "No nombre",
             
-            telefonoPadres: req.body.telefonoPadres || "No nombre",
-            emailPadres: req.body.emailPadres || "No nombre",
-            fechaHoy: req.body.fechaHoy || "0000/00/00",
+            telefonoPadres: req.body.telefonoPadresG || "No nombre",
+            emailPadres: req.body.emailPadresG || "No nombre",
+            fechaHoy: req.body.fechaHoyG || "0000/00/00"
         })
 
         convivencia.save().then(data => {

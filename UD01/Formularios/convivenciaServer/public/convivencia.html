@@ -24,7 +24,7 @@
         <img class="senia" src="img/lasenia.png" alt="">
     </div>
     <h1>INCIDÈNCIA</h1>
-    <form method="POST" action="http://localhost:3000/convivencia/">
+    <form method="POST" action="convivencia/">
         <div class="form-group row">
             <label for="alumno" class="col-sm-2 col-form-label">ALUMNE/A</label>
             <div class="col-sm-7">
@@ -59,7 +59,6 @@
                 <input name="lugarIncidente" type="text" class="form-control" id="lugar">
             </div>
         </div>
-
         <div class="botones">
             <select name="tipoConvivencia" id="tipoConvivencia">
                 <option value="leve" onclick="visibilidadLeve()">Leve</option>
@@ -183,15 +182,15 @@
             </div>
             <div>
                 <p>La comunicacó als pares es fa pels següents mitjans: Telefon
-                    <input type="text" name="telefonoPadres" class="col-md-auto" id="telefonPares" placeholder="Telefono">
-                    per correu <input type="email" name="emailPadres" class="col-md-auto" id="emailPadres" placeholder="Email">
+                    <input type="text" name="telefonoPadresL" class="col-md-auto" id="telefonoPadresL" placeholder="Telefono">
+                    per correu <input type="email" name="emailPadresL" class="col-md-auto" id="emailPadresL" placeholder="Email">
                     o per mig de l'Alumne. Amb compareixença del pare/madre/tutor legal.
                 </p>
                 <div class="row">
                     <div class="col">
                     </div>
                     <div class="col">
-                        Paiporta, <input name="fechaHoy" type="date" id="fechaFirma" />
+                        Paiporta, <input name="fechaHoyL" type="date" id="fechaFirmaL" />
                     </div>
                 </div>
             </div>
@@ -236,8 +235,8 @@
                 </select>
                 <div>
                     <p>La comunicacó als pares es fa pels següents mitjans: Telefon
-                        <input type="text" name="telefonoPadres" class="col-md-auto" id="telefonPares" placeholder="Telefono">
-                        per correu <input type="email" name="emailPadres" class="col-md-auto" id="emailPadres"
+                        <input type="text" name="telefonoPadresG" class="col-md-auto" id="telefonoPadresG" placeholder="Telefono">
+                        per correu <input type="email" name="emailPadresG" class="col-md-auto" id="emailPadresG"
                             placeholder="Email">
                         o per mig de l'Alumne. Amb compareixença del pare/madre/tutor legal.
                     </p>
@@ -245,7 +244,7 @@
                         <div class="col">
                         </div>
                         <div class="col">
-                            Paiporta, <input name="fechaHoy" type="date" id="fechaFirma" />
+                            Paiporta, <input name="fechaHoyG" type="date" id="fechaFirmaG" />
                         </div>
                     </div>
                 </div>

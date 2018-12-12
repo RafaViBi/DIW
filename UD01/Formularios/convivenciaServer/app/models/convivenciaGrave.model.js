@@ -12,9 +12,6 @@ const convivenciaGraveSchema = mongoose.Schema({
     telefonoPadres: String,
     emailPadres: String,
     fechaHoy: String,
-    telefonoPadres: String,
-    emailPadres: String,
-    fechaHoy: String,
 
 }, {
         timestamps: true

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="vl">
+
+            </div>
+
+            <div class="col">
+                <center>REGISTRO<center>
+                        <form action="/action_page.php">
+                            Correo electronico: <input type="email" name="email" placeholder="Correo electronico"
+                                required>
+                            Nombre:<input type="text" name="nombre" placeholder="Nombre" required>
+                            DNI:<input type="text" name="dni" placeholder="DNI" required>
+                            Apellidos:<input type="text" name="apellidos" placeholder="Apellidos" required>
+                            Teléfono:<input type="text" name="telefono" placeholder="telefono" required>
+                            Contraseña:<input type="password" name="contra" placeholder="Contraseña" required>
+                            Repetir contraseña:<input type="password" name="repcontra" placeholder="Repetir contraseña"
+                                required>
+                            <input type="submit" value="Login">
+                        </form>
+            </div>
+
+            <div class="col">
+                <center>LOGIN<center>
+                        <form action="/action_page.php">
+                            <input type="text" name="nombre" placeholder="Nombre Usuario" required>
+                            <input type="password" name="contra" placeholder="Contraseña" required>
+                            <input type="submit" value="Login">
+                        </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

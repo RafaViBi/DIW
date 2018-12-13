@@ -7,7 +7,7 @@ $.getJSON(ruta, function (data) {
   $.each(data, function (key, val) {
     if (camposMostrar.includes(key)) {
       items.push("<label>" + key + "</label><br>");
-      items.push("<input value='" + val + "'></input> <input type='submit' value='Modificar campo' onclick='renovarCampo()'> <br>");
+      items.push("<input name='" + val + "'  value='" + val + "'></input> <input type='submit' value='Modificar campo' onclick='renovarCampo()'> <br>");
     }
   });
 

@@ -76,7 +76,6 @@ exports.create = (req, res) => {
         });
 
     }
-    //res.redirect("/menu.html");
 };
 
 // Obtener todas las Faltas Leves
@@ -146,7 +145,7 @@ exports.findOne = (req, res) => {
         });
 };
 
-// Actualizar un convivencia
+// Actualizar una convivencia
 exports.update = (req, res) => {
     // Validate Request
     if (!req.body) {

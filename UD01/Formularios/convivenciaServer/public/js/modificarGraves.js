@@ -16,7 +16,7 @@ $.getJSON(ruta, function (data) {
   }).appendTo("#modificarFalta");
 });
 
-function renovarCampo(auxId) {
+function renovarCampo() {
   $.ajax({
     type: "PUT",
     url: "http://localhost:3000/convivencia/" + auxId,

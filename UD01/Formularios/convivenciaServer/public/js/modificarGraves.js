@@ -4,6 +4,7 @@ var camposMostrar = ["nombreAlumno", "grupoAlumno", "nombreProfesor", "horarioAt
 
 $.getJSON(ruta, function (data) {
   var items = [];
+  console.log(data);
   $.each(data, function (key, val) {
     if (camposMostrar.includes(key)) {
       items.push("<label>" + key + "</label><br>");

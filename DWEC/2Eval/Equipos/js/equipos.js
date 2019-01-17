@@ -6,6 +6,10 @@ function cargar() {
     document.getElementById("g2").addEventListener("dragover",allowDrop);
     document.getElementById("fnatic").addEventListener("drop",drop);
     document.getElementById("fnatic").addEventListener("dragover",allowDrop);
+    document.getElementById("origen").addEventListener("drop",drop);
+    document.getElementById("origen").addEventListener("dragover",allowDrop);
+    document.getElementById("sk").addEventListener("drop",drop);
+    document.getElementById("sk").addEventListener("dragover",allowDrop);
 
     var jugadores = document.getElementsByClassName("jugador");
     

@@ -3,9 +3,9 @@
 session_start();
 
     if (!isset($_SESSION['username'])) {
-        include('out.php');
+        include('noRegistrado.php'); //Usuario no log
     } else {
-        include('in.php');
+        include('registrado.php'); //Usuario log
     }
     
 ?>

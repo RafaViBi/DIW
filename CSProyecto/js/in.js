@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", cargar, false);
 
+var ip = "52.214.73.33";
+
 function cargar() {
     
     document.getElementById("out").addEventListener("click",logOut);
@@ -8,9 +10,9 @@ function cargar() {
 }
 
 function logOut() {
-    location.href='http://54.171.171.163:8080/PROYECTO/logout.php';
+    location.href='http://' + ip + ':8080/PROYECTO/logout.php';
 }
 
 function retInicio() {
-    location.href='http://54.171.171.163:8080/PROYECTO/index.php';
+    location.href='http://' + ip + ':8080/PROYECTO/index.php';
 }

@@ -7,6 +7,7 @@ function cargar() {
 
     document.getElementById("openNav").addEventListener("click", openNav);
     document.getElementById("closeNav").addEventListener("click", closeNav);
+    
     acc = document.getElementsByClassName("accordion");
 
     for (i = 0; i < acc.length; i++) {
@@ -20,6 +21,13 @@ function cargar() {
             }
         });
     }
+
+    window.addEventListener('mouseup',function (event) {
+        var box = document.getElementById('mySidenav');
+        if (event.target != box && event.target.parentNode != box ) {
+            closeNav();            
+        }
+    });
 }
 
 function openNav() {

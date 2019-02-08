@@ -135,6 +135,21 @@ session_start();
     </div>
 
     <!-- Final Sidebar -->
+    
+    <!-- Modal login -->
+    
+    <button id="myBtn">Open Modal</button>
+    
+        <div id="myModal" class="modal">
+        
+            <!-- Modal content -->
+            
+            <?php
+            include('registro.php');
+            ?>
+        </div>
+    
+    <!-- Fin modal login -->
 
     <script>
         $(document).ready(function () {
